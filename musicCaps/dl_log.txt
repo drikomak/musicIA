@@ -1,0 +1,633 @@
+ERROR: [youtube] wBe5tW8iJew: This video is unavailable
+ERROR: [youtube] SLq-Co_szYo: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] wBe5tW8iJew: This video is unavailable
+ERROR: [youtube] SLq-Co_szYo: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] wBe5tW8iJew: This video is unavailable
+ERROR: [youtube] SLq-Co_szYo: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] wBe5tW8iJew: This video is unavailable
+ERROR: [youtube] SLq-Co_szYo: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] wBe5tW8iJew: This video is unavailable
+ERROR: [youtube] SLq-Co_szYo: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] Vu7ZUUl4VPc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] Vu7ZUUl4VPc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 7LGLhQFiE0s: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] Vu7ZUUl4VPc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 7LGLhQFiE0s: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] Vu7ZUUl4VPc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 7LGLhQFiE0s: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] Vu7ZUUl4VPc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 7LGLhQFiE0s: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 7LGLhQFiE0s: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] InfQUMh935c: This video is unavailable
+ERROR: [youtube] InfQUMh935c: This video is unavailable
+ERROR: [youtube] InfQUMh935c: This video is unavailable
+ERROR: [youtube] InfQUMh935c: This video is unavailable
+ERROR: [youtube] InfQUMh935c: This video is unavailable
+ERROR: [youtube] lrk00BNiuD4: This video is unavailable
+ERROR: [youtube] lrk00BNiuD4: This video is unavailable
+ERROR: [youtube] lrk00BNiuD4: This video is unavailable
+ERROR: [youtube] lrk00BNiuD4: This video is unavailable
+ERROR: [youtube] lrk00BNiuD4: This video is unavailable
+ERROR: [youtube] hwp7wCKIXg4: This video is unavailable
+ERROR: [youtube] hwp7wCKIXg4: This video is unavailable
+ERROR: [youtube] hwp7wCKIXg4: This video is unavailable
+ERROR: [youtube] hwp7wCKIXg4: This video is unavailable
+ERROR: [youtube] hwp7wCKIXg4: This video is unavailable
+ERROR: [youtube] FtskdD6Py7Y: This video is unavailable
+ERROR: [youtube] FtskdD6Py7Y: This video is unavailable
+ERROR: [youtube] FtskdD6Py7Y: This video is unavailable
+ERROR: [youtube] FtskdD6Py7Y: This video is unavailable
+ERROR: [youtube] FtskdD6Py7Y: This video is unavailable
+ERROR: [youtube] Fv9swdLA-lo: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] Fv9swdLA-lo: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] Fv9swdLA-lo: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] Fv9swdLA-lo: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] Fv9swdLA-lo: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] m-e3w2yZ6sM: This video is unavailable
+ERROR: [youtube] m-e3w2yZ6sM: This video is unavailable
+ERROR: [youtube] ed-1zAOr9PQ: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] m-e3w2yZ6sM: This video is unavailable
+ERROR: [youtube] ed-1zAOr9PQ: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] m-e3w2yZ6sM: This video is unavailable
+ERROR: [youtube] ed-1zAOr9PQ: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] m-e3w2yZ6sM: This video is unavailable
+ERROR: [youtube] ed-1zAOr9PQ: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] ed-1zAOr9PQ: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] wSeT9dlfDTc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] wSeT9dlfDTc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 7WZwlOrRELI: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] wSeT9dlfDTc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 7WZwlOrRELI: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] wSeT9dlfDTc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 7WZwlOrRELI: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] wSeT9dlfDTc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 7WZwlOrRELI: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 7WZwlOrRELI: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] AaUZb-iRStE: This video is unavailable
+ERROR: [youtube] AaUZb-iRStE: This video is unavailable
+ERROR: [youtube] AaUZb-iRStE: This video is unavailable
+ERROR: [youtube] AaUZb-iRStE: This video is unavailable
+ERROR: [youtube] AaUZb-iRStE: This video is unavailable
+ERROR: [youtube] t5fW1-6iXZY: This video is unavailable
+ERROR: [youtube] t5fW1-6iXZY: This video is unavailable
+ERROR: [youtube] t5fW1-6iXZY: This video is unavailable
+ERROR: [youtube] t5fW1-6iXZY: This video is unavailable
+ERROR: [youtube] t5fW1-6iXZY: This video is unavailable
+ERROR: [youtube] Czbi1u-gwUU: This video is no longer available due to a copyright claim by Cheb Hasni
+ERROR: [youtube] Czbi1u-gwUU: This video is no longer available due to a copyright claim by Cheb Hasni
+ERROR: [youtube] Czbi1u-gwUU: This video is no longer available due to a copyright claim by Cheb Hasni
+ERROR: [youtube] Czbi1u-gwUU: This video is no longer available due to a copyright claim by Cheb Hasni
+ERROR: [youtube] Czbi1u-gwUU: This video is no longer available due to a copyright claim by Cheb Hasni
+ERROR: [youtube] T6iv9GFIVyU: This video is no longer available due to a copyright claim by Rishad Zahir
+ERROR: [youtube] T6iv9GFIVyU: This video is no longer available due to a copyright claim by Rishad Zahir
+ERROR: [youtube] ba3QPheW8mI: This video is unavailable
+ERROR: [youtube] T6iv9GFIVyU: This video is no longer available due to a copyright claim by Rishad Zahir
+ERROR: [youtube] ba3QPheW8mI: This video is unavailable
+ERROR: [youtube] T6iv9GFIVyU: This video is no longer available due to a copyright claim by Rishad Zahir
+ERROR: [youtube] ba3QPheW8mI: This video is unavailable
+ERROR: [youtube] T6iv9GFIVyU: This video is no longer available due to a copyright claim by Rishad Zahir
+ERROR: [youtube] ba3QPheW8mI: This video is unavailable
+ERROR: [youtube] tEZU-ZRhSoY: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] ba3QPheW8mI: This video is unavailable
+ERROR: [youtube] tEZU-ZRhSoY: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] tEZU-ZRhSoY: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] 25Ccp8usBtE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] tEZU-ZRhSoY: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] 25Ccp8usBtE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] 25Ccp8usBtE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] tEZU-ZRhSoY: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] 25Ccp8usBtE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] ZLDQ8-8AyI4: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 25Ccp8usBtE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] ZLDQ8-8AyI4: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] ZLDQ8-8AyI4: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] Ah_aYOGnQ_I: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] Ah_aYOGnQ_I: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] ZLDQ8-8AyI4: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] WKYUiLace9Y: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] ZLDQ8-8AyI4: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] WKYUiLace9Y: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] Ah_aYOGnQ_I: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] WKYUiLace9Y: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] Ah_aYOGnQ_I: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] WKYUiLace9Y: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] Ah_aYOGnQ_I: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] WKYUiLace9Y: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] PTCsH-ffeq4: This video is no longer available because the uploader has closed their YouTube account.
+ERROR: [youtube] PTCsH-ffeq4: This video is no longer available because the uploader has closed their YouTube account.
+ERROR: [youtube] PTCsH-ffeq4: This video is no longer available because the uploader has closed their YouTube account.
+ERROR: [youtube] PTCsH-ffeq4: This video is no longer available because the uploader has closed their YouTube account.
+ERROR: [youtube] PTCsH-ffeq4: This video is no longer available because the uploader has closed their YouTube account.
+ERROR: [youtube] iXgEQj1Fs7g: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] iXgEQj1Fs7g: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] iXgEQj1Fs7g: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] iXgEQj1Fs7g: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] iXgEQj1Fs7g: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] JNw0A8pRnsQ: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] JNw0A8pRnsQ: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] JNw0A8pRnsQ: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] JNw0A8pRnsQ: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] JNw0A8pRnsQ: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] bpwO0lbJPF4: This video is unavailable
+ERROR: [youtube] bpwO0lbJPF4: This video is unavailable
+ERROR: [youtube] bpwO0lbJPF4: This video is unavailable
+ERROR: [youtube] bpwO0lbJPF4: This video is unavailable
+ERROR: [youtube] bpwO0lbJPF4: This video is unavailable
+ERROR: [youtube] MYtq46rNsCA: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] MYtq46rNsCA: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] MYtq46rNsCA: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] idVCpQaByc4: We're processing this video. Check back later.
+ERROR: [youtube] MYtq46rNsCA: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] idVCpQaByc4: We're processing this video. Check back later.
+ERROR: [youtube] MYtq46rNsCA: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] idVCpQaByc4: We're processing this video. Check back later.
+ERROR: [youtube] idVCpQaByc4: We're processing this video. Check back later.
+ERROR: [youtube] idVCpQaByc4: We're processing this video. Check back later.
+ERROR: [youtube] DHDn79ee98Q: This video is unavailable
+ERROR: [youtube] DHDn79ee98Q: This video is unavailable
+ERROR: [youtube] DHDn79ee98Q: This video is unavailable
+ERROR: [youtube] DHDn79ee98Q: This video is unavailable
+ERROR: [youtube] DHDn79ee98Q: This video is unavailable
+ERROR: [youtube] qIxpfaeZ-zs: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] qIxpfaeZ-zs: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] qIxpfaeZ-zs: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] qIxpfaeZ-zs: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] itgeNVRhBKs: This video is unavailable
+ERROR: [youtube] qIxpfaeZ-zs: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] itgeNVRhBKs: This video is unavailable
+ERROR: [youtube] itgeNVRhBKs: This video is unavailable
+ERROR: [youtube] We0WIPYrtRE: This video is unavailable
+ERROR: [youtube] itgeNVRhBKs: This video is unavailable
+ERROR: [youtube] We0WIPYrtRE: This video is unavailable
+ERROR: [youtube] itgeNVRhBKs: This video is unavailable
+ERROR: [youtube] We0WIPYrtRE: This video is unavailable
+ERROR: [youtube] We0WIPYrtRE: This video is unavailable
+ERROR: [youtube] We0WIPYrtRE: This video is unavailable
+ERROR: [youtube] tju-t_Bz_W8: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] tju-t_Bz_W8: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] tju-t_Bz_W8: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] tju-t_Bz_W8: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] tju-t_Bz_W8: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] Jk2mvFrdZTU: This video is no longer available due to a copyright claim by Abderrahim Sefiani
+ERROR: [youtube] -sevczF5etI: This video is unavailable
+ERROR: [youtube] Jk2mvFrdZTU: This video is no longer available due to a copyright claim by Abderrahim Sefiani
+ERROR: [youtube] -sevczF5etI: This video is unavailable
+ERROR: [youtube] Jk2mvFrdZTU: This video is no longer available due to a copyright claim by Abderrahim Sefiani
+ERROR: [youtube] Jk2mvFrdZTU: This video is no longer available due to a copyright claim by Abderrahim Sefiani
+ERROR: [youtube] -sevczF5etI: This video is unavailable
+ERROR: [youtube] -sevczF5etI: This video is unavailable
+ERROR: [youtube] Jk2mvFrdZTU: This video is no longer available due to a copyright claim by Abderrahim Sefiani
+ERROR: [youtube] -sevczF5etI: This video is unavailable
+ERROR: [youtube] fZyq2pM2-dI: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] fZyq2pM2-dI: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] cADT8fUucLQ: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] fZyq2pM2-dI: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] fZyq2pM2-dI: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] cADT8fUucLQ: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] cADT8fUucLQ: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] fZyq2pM2-dI: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] cADT8fUucLQ: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] cADT8fUucLQ: This video is no longer available because the YouTube account associated with this video has been terminated.
+
+
+ERROR: ffmpeg exited with code 4294967274
+
+
+ERROR: ffmpeg exited with code 4294967274
+
+
+ERROR: ffmpeg exited with code 4294967274
+ERROR: [youtube] 8ZK1ajW598M: This video is unavailable
+ERROR: [youtube] 8ZK1ajW598M: This video is unavailable
+
+
+ERROR: ffmpeg exited with code 4294967274
+
+
+ERROR: ffmpeg exited with code 4294967274
+ERROR: [youtube] 8ZK1ajW598M: This video is unavailable
+ERROR: [youtube] 8ZK1ajW598M: This video is unavailable
+ERROR: [youtube] 8ZK1ajW598M: This video is unavailable
+ERROR: [youtube] B7iRvj8y9aU: This video is no longer available because the YouTube account associated with this video has been terminated.
+
+
+ERROR: ffmpeg exited with code 4294967274
+
+
+ERROR: ffmpeg exited with code 4294967274
+ERROR: [youtube] B7iRvj8y9aU: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] B7iRvj8y9aU: This video is no longer available because the YouTube account associated with this video has been terminated.
+
+
+ERROR: ffmpeg exited with code 4294967274
+ERROR: [youtube] j9hAUlz5kQs: This video is private. If the owner of this video has granted you access, please sign in.
+
+
+ERROR: ffmpeg exited with code 4294967274
+ERROR: [youtube] j9hAUlz5kQs: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] B7iRvj8y9aU: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] j9hAUlz5kQs: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] B7iRvj8y9aU: This video is no longer available because the YouTube account associated with this video has been terminated.
+
+
+ERROR: ffmpeg exited with code 4294967274
+ERROR: [youtube] j9hAUlz5kQs: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] j9hAUlz5kQs: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] Zs3arUuPciY: We're processing this video. Check back later.
+ERROR: [youtube] 8hT2G2ew6-c: This video is unavailable
+ERROR: [youtube] Zs3arUuPciY: We're processing this video. Check back later.
+ERROR: [youtube] 8hT2G2ew6-c: This video is unavailable
+ERROR: [youtube] Zs3arUuPciY: We're processing this video. Check back later.
+ERROR: [youtube] qc1DaM4kdO0: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 8hT2G2ew6-c: This video is unavailable
+ERROR: [youtube] Zs3arUuPciY: We're processing this video. Check back later.
+ERROR: [youtube] qc1DaM4kdO0: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 8hT2G2ew6-c: This video is unavailable
+ERROR: [youtube] Zs3arUuPciY: We're processing this video. Check back later.
+ERROR: [youtube] qc1DaM4kdO0: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 8hT2G2ew6-c: This video is unavailable
+ERROR: [youtube] qc1DaM4kdO0: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] qc1DaM4kdO0: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 5Y_mT93tkvQ: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] 5Y_mT93tkvQ: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] 2dyxjGTXSpA: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] 5Y_mT93tkvQ: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] 2dyxjGTXSpA: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] 5Y_mT93tkvQ: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] 2dyxjGTXSpA: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] 5Y_mT93tkvQ: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] 2dyxjGTXSpA: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] 2dyxjGTXSpA: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] WvEtOYCShfM: This video is unavailable
+ERROR: [youtube] WvEtOYCShfM: This video is unavailable
+ERROR: [youtube] WvEtOYCShfM: This video is unavailable
+ERROR: [youtube] WvEtOYCShfM: This video is unavailable
+ERROR: [youtube] WvEtOYCShfM: This video is unavailable
+ERROR: [youtube] NIcsJ8sEd0M: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] HAHn_zB47ig: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] NIcsJ8sEd0M: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] HAHn_zB47ig: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] NIcsJ8sEd0M: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] HAHn_zB47ig: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] NIcsJ8sEd0M: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] 8olHAhUKkuk: This video is unavailable
+ERROR: [youtube] HAHn_zB47ig: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] NIcsJ8sEd0M: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] 8olHAhUKkuk: This video is unavailable
+ERROR: [youtube] HAHn_zB47ig: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 8olHAhUKkuk: This video is unavailable
+ERROR: [youtube] 8olHAhUKkuk: This video is unavailable
+ERROR: [youtube] 8olHAhUKkuk: This video is unavailable
+
+
+ERROR: ffmpeg exited with code 4294967274
+ERROR: [youtube] BKQYrrJVg6g: This video is unavailable
+ERROR: [youtube] BKQYrrJVg6g: This video is unavailable
+
+
+ERROR: ffmpeg exited with code 4294967274
+ERROR: [youtube] BKQYrrJVg6g: This video is unavailable
+ERROR: [youtube] BKQYrrJVg6g: This video is unavailable
+
+
+ERROR: ffmpeg exited with code 4294967158
+
+
+ERROR: ffmpeg exited with code 4294967274
+ERROR: [youtube] BKQYrrJVg6g: This video is unavailable
+
+
+ERROR: ffmpeg exited with code 4294967274
+ERROR: [youtube] nTtxF9Wyw6o: This video is unavailable
+
+
+ERROR: ffmpeg exited with code 4294967274
+ERROR: [youtube] nTtxF9Wyw6o: This video is unavailable
+ERROR: [youtube] nTtxF9Wyw6o: This video is unavailable
+ERROR: [youtube] nTtxF9Wyw6o: This video is unavailable
+ERROR: [youtube] nTtxF9Wyw6o: This video is unavailable
+ERROR: [youtube] fwXh_lMOqu0: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] fwXh_lMOqu0: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] fwXh_lMOqu0: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] fwXh_lMOqu0: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] fwXh_lMOqu0: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] jd1IS7N3u0I: This video contains content from SME, who has blocked it in your country on copyright grounds
+ERROR: [youtube] jd1IS7N3u0I: This video contains content from SME, who has blocked it in your country on copyright grounds
+ERROR: [youtube] jd1IS7N3u0I: This video contains content from SME, who has blocked it in your country on copyright grounds
+ERROR: [youtube] jd1IS7N3u0I: This video contains content from SME, who has blocked it in your country on copyright grounds
+ERROR: [youtube] jd1IS7N3u0I: This video contains content from SME, who has blocked it in your country on copyright grounds
+ERROR: [youtube] NXuB3ZEpM5U: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] XCQMJXkI5bA: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] NXuB3ZEpM5U: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] XCQMJXkI5bA: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] _ACyiKGpD8Y: This video is unavailable
+ERROR: [youtube] NXuB3ZEpM5U: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] XCQMJXkI5bA: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] _ACyiKGpD8Y: This video is unavailable
+ERROR: [youtube] NXuB3ZEpM5U: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] XCQMJXkI5bA: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] _ACyiKGpD8Y: This video is unavailable
+ERROR: [youtube] XCQMJXkI5bA: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] _ACyiKGpD8Y: This video is unavailable
+ERROR: [youtube] NXuB3ZEpM5U: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] _ACyiKGpD8Y: This video is unavailable
+ERROR: [youtube] _DHMdtRRJzE: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] _DHMdtRRJzE: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] _DHMdtRRJzE: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] _DHMdtRRJzE: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] _DHMdtRRJzE: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 0J_2K1Gvruk: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 0J_2K1Gvruk: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] g8USMvt9np0: We're processing this video. Check back later.
+ERROR: [youtube] 0J_2K1Gvruk: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] g8USMvt9np0: We're processing this video. Check back later.
+ERROR: [youtube] 0J_2K1Gvruk: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] g8USMvt9np0: We're processing this video. Check back later.
+ERROR: [youtube] 0J_2K1Gvruk: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] g8USMvt9np0: We're processing this video. Check back later.
+ERROR: [youtube] g8USMvt9np0: We're processing this video. Check back later.
+ERROR: [youtube] jmPmqzxlOTY: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] jmPmqzxlOTY: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] jmPmqzxlOTY: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] qyCea2TuUV4: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] jmPmqzxlOTY: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] qyCea2TuUV4: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] jmPmqzxlOTY: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] qyCea2TuUV4: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] qyCea2TuUV4: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] qyCea2TuUV4: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] UOC4VWQpnDM: This video contains content from AltraModaMusic, who has blocked it on copyright grounds
+ERROR: [youtube] UOC4VWQpnDM: This video contains content from AltraModaMusic, who has blocked it on copyright grounds
+ERROR: [youtube] UOC4VWQpnDM: This video contains content from AltraModaMusic, who has blocked it on copyright grounds
+ERROR: [youtube] UOC4VWQpnDM: This video contains content from AltraModaMusic, who has blocked it on copyright grounds
+ERROR: [youtube] UOC4VWQpnDM: This video contains content from AltraModaMusic, who has blocked it on copyright grounds
+ERROR: [youtube] 374R7te0ra0: This content is not available in your country due to a trademark complaint.
+ERROR: [youtube] 374R7te0ra0: This content is not available in your country due to a trademark complaint.
+ERROR: [youtube] 374R7te0ra0: This content is not available in your country due to a trademark complaint.
+ERROR: [youtube] k-LkhT4HAiE: This video is unavailable
+ERROR: [youtube] 374R7te0ra0: This content is not available in your country due to a trademark complaint.
+ERROR: [youtube] k-LkhT4HAiE: This video is unavailable
+ERROR: [youtube] 374R7te0ra0: This content is not available in your country due to a trademark complaint.
+ERROR: [youtube] k-LkhT4HAiE: This video is unavailable
+ERROR: [youtube] k-LkhT4HAiE: This video is unavailable
+ERROR: [youtube] k-LkhT4HAiE: This video is unavailable
+ERROR: [youtube] 63rqIYPHvlc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 63rqIYPHvlc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 63rqIYPHvlc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 63rqIYPHvlc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 63rqIYPHvlc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] d0Uz_RnRV88: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] d0Uz_RnRV88: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] d0Uz_RnRV88: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] d0Uz_RnRV88: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] UdA6I_tXVHE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] d0Uz_RnRV88: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] BeFzozm_H5M: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] UdA6I_tXVHE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] BeFzozm_H5M: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] UdA6I_tXVHE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] BeFzozm_H5M: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] UdA6I_tXVHE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] BeFzozm_H5M: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] UdA6I_tXVHE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] BeFzozm_H5M: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] d6-bQMCz7j0: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] d6-bQMCz7j0: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] d6-bQMCz7j0: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] d6-bQMCz7j0: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] d6-bQMCz7j0: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] BiQik0xsWxk: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] BiQik0xsWxk: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] BiQik0xsWxk: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] BiQik0xsWxk: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] BiQik0xsWxk: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] gdtw54I8soM: This video is unavailable
+ERROR: [youtube] gdtw54I8soM: This video is unavailable
+ERROR: [youtube] gdtw54I8soM: This video is unavailable
+ERROR: [youtube] gdtw54I8soM: This video is unavailable
+ERROR: [youtube] gdtw54I8soM: This video is unavailable
+ERROR: [youtube] rQeikHMQGOM: This video is unavailable
+ERROR: [youtube] rQeikHMQGOM: This video is unavailable
+ERROR: [youtube] rQeikHMQGOM: This video is unavailable
+ERROR: [youtube] rQeikHMQGOM: This video is unavailable
+ERROR: [youtube] Hvs6Xwc6-gc: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] rQeikHMQGOM: This video is unavailable
+ERROR: [youtube] Hvs6Xwc6-gc: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] Hvs6Xwc6-gc: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] Hvs6Xwc6-gc: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] Hvs6Xwc6-gc: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] 0abzD7hBTRk: This video contains content from BBTV_Fremantle, who has blocked it in your country on copyright grounds
+ERROR: [youtube] 0abzD7hBTRk: This video contains content from BBTV_Fremantle, who has blocked it in your country on copyright grounds
+ERROR: [youtube] 0abzD7hBTRk: This video contains content from BBTV_Fremantle, who has blocked it in your country on copyright grounds
+ERROR: [youtube] 0abzD7hBTRk: This video contains content from BBTV_Fremantle, who has blocked it in your country on copyright grounds
+ERROR: [youtube] go_7i6WvfeE: This video contains content from Believe Music, who has blocked it on copyright grounds
+ERROR: [youtube] 0abzD7hBTRk: This video contains content from BBTV_Fremantle, who has blocked it in your country on copyright grounds
+ERROR: [youtube] go_7i6WvfeE: This video contains content from Believe Music, who has blocked it on copyright grounds
+ERROR: [youtube] go_7i6WvfeE: This video contains content from Believe Music, who has blocked it on copyright grounds
+ERROR: [youtube] go_7i6WvfeE: This video contains content from Believe Music, who has blocked it on copyright grounds
+ERROR: [youtube] go_7i6WvfeE: This video contains content from Believe Music, who has blocked it on copyright grounds
+ERROR: [youtube] EhFWLbNBOxc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] EhFWLbNBOxc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] EhFWLbNBOxc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] EhFWLbNBOxc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] EhFWLbNBOxc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] Xoke1wUwEXY: This video is unavailable
+ERROR: [youtube] Xoke1wUwEXY: This video is unavailable
+ERROR: [youtube] Xoke1wUwEXY: This video is unavailable
+ERROR: [youtube] Xoke1wUwEXY: This video is unavailable
+ERROR: [youtube] Xoke1wUwEXY: This video is unavailable
+ERROR: [youtube] rfah0bhmYkc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 0fqtA_ZBn_8: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] rfah0bhmYkc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] UzAXqTsdtjY: This video is unavailable
+ERROR: [youtube] 0fqtA_ZBn_8: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] rfah0bhmYkc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] UzAXqTsdtjY: This video is unavailable
+ERROR: [youtube] 0fqtA_ZBn_8: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] rfah0bhmYkc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] UzAXqTsdtjY: This video is unavailable
+ERROR: [youtube] 0fqtA_ZBn_8: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] rfah0bhmYkc: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] UzAXqTsdtjY: This video is unavailable
+ERROR: [youtube] 0fqtA_ZBn_8: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] UzAXqTsdtjY: This video is unavailable
+ERROR: [youtube] keIvA2wSPZc: This video contains content from UMG, who has blocked it in your country on copyright grounds
+ERROR: [youtube] keIvA2wSPZc: This video contains content from UMG, who has blocked it in your country on copyright grounds
+ERROR: [youtube] keIvA2wSPZc: This video contains content from UMG, who has blocked it in your country on copyright grounds
+ERROR: [youtube] keIvA2wSPZc: This video contains content from UMG, who has blocked it in your country on copyright grounds
+ERROR: [youtube] keIvA2wSPZc: This video contains content from UMG, who has blocked it in your country on copyright grounds
+ERROR: [youtube] yzT9nsHslAk: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 0khKvVDyYV4: This video is unavailable
+ERROR: [youtube] yzT9nsHslAk: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 0khKvVDyYV4: This video is unavailable
+ERROR: [youtube] 0khKvVDyYV4: This video is unavailable
+ERROR: [youtube] yzT9nsHslAk: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 0khKvVDyYV4: This video is unavailable
+ERROR: [youtube] yzT9nsHslAk: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] Xy7KtmHMQzU: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] 0khKvVDyYV4: This video is unavailable
+ERROR: [youtube] yzT9nsHslAk: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] Xy7KtmHMQzU: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] Xy7KtmHMQzU: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] Xy7KtmHMQzU: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] Xy7KtmHMQzU: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] vOAXAoHtl7o: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] vOAXAoHtl7o: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] RQ0-sjpAPKU: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] vOAXAoHtl7o: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] RQ0-sjpAPKU: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] kiu-40_T5nY: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] vOAXAoHtl7o: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] RQ0-sjpAPKU: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] kiu-40_T5nY: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 0pewITE1550: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] z4ewUsnIJKI: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] RQ0-sjpAPKU: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] vOAXAoHtl7o: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] L5Uu_0xEZg4: This video is unavailable
+ERROR: [youtube] kiu-40_T5nY: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 0pewITE1550: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] z4ewUsnIJKI: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] RQ0-sjpAPKU: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] L5Uu_0xEZg4: This video is unavailable
+ERROR: [youtube] kiu-40_T5nY: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 0pewITE1550: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] z4ewUsnIJKI: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] L5Uu_0xEZg4: This video is unavailable
+ERROR: [youtube] kiu-40_T5nY: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] 0pewITE1550: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] z4ewUsnIJKI: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] dcY062mkf9g: This video is unavailable
+ERROR: [youtube] L5Uu_0xEZg4: This video is unavailable
+ERROR: [youtube] 0pewITE1550: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] z4ewUsnIJKI: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] dcY062mkf9g: This video is unavailable
+ERROR: [youtube] L5Uu_0xEZg4: This video is unavailable
+ERROR: [youtube] dcY062mkf9g: This video is unavailable
+ERROR: [youtube] dcY062mkf9g: This video is unavailable
+ERROR: [youtube] dcY062mkf9g: This video is unavailable
+ERROR: [youtube] IF-77lLlMzE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] vQHKa69Mkzo: This video contains content from TV Tokyo Anime Rights Management, who has blocked it in your country on copyright grounds
+ERROR: [youtube] IF-77lLlMzE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] vQHKa69Mkzo: This video contains content from TV Tokyo Anime Rights Management, who has blocked it in your country on copyright grounds
+ERROR: [youtube] IF-77lLlMzE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] vQHKa69Mkzo: This video contains content from TV Tokyo Anime Rights Management, who has blocked it in your country on copyright grounds
+ERROR: [youtube] IF-77lLlMzE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] vQHKa69Mkzo: This video contains content from TV Tokyo Anime Rights Management, who has blocked it in your country on copyright grounds
+ERROR: [youtube] IF-77lLlMzE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] vQHKa69Mkzo: This video contains content from TV Tokyo Anime Rights Management, who has blocked it in your country on copyright grounds
+ERROR: [youtube] zCrpaLEq1VQ: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] zCrpaLEq1VQ: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] zCrpaLEq1VQ: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] zCrpaLEq1VQ: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] vVNWjq9byoQ: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] zCrpaLEq1VQ: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] vVNWjq9byoQ: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] vVNWjq9byoQ: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] vVNWjq9byoQ: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] vVNWjq9byoQ: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] C7OIuhWSbjU: This video is unavailable
+ERROR: [youtube] C7OIuhWSbjU: This video is unavailable
+ERROR: [youtube] C7OIuhWSbjU: This video is unavailable
+ERROR: [youtube] C7OIuhWSbjU: This video is unavailable
+ERROR: [youtube] ksYM8YzzWXo: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] C7OIuhWSbjU: This video is unavailable
+ERROR: [youtube] ksYM8YzzWXo: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] ksYM8YzzWXo: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] ksYM8YzzWXo: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] ksYM8YzzWXo: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] dsVzafZik3c: The uploader has not made this video available in your country
+ERROR: [youtube] OS4YFp3DiEE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] dsVzafZik3c: The uploader has not made this video available in your country
+ERROR: [youtube] OS4YFp3DiEE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] dsVzafZik3c: The uploader has not made this video available in your country
+ERROR: [youtube] OS4YFp3DiEE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] dsVzafZik3c: The uploader has not made this video available in your country
+ERROR: [youtube] OS4YFp3DiEE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] dsVzafZik3c: The uploader has not made this video available in your country
+ERROR: [youtube] OS4YFp3DiEE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] CCFYOw8keiI: The uploader has not made this video available.
+ERROR: [youtube] CCFYOw8keiI: The uploader has not made this video available.
+ERROR: [youtube] CCFYOw8keiI: The uploader has not made this video available.
+ERROR: [youtube] zSSIGv82318: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] CCFYOw8keiI: The uploader has not made this video available.
+ERROR: [youtube] zSSIGv82318: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] CCFYOw8keiI: The uploader has not made this video available.
+ERROR: [youtube] zSSIGv82318: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] zSSIGv82318: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] zSSIGv82318: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] zSq2D_GF00o: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] zSq2D_GF00o: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] opu2tXoVNKU: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] zSq2D_GF00o: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] opu2tXoVNKU: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] zSq2D_GF00o: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] opu2tXoVNKU: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] zSq2D_GF00o: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] opu2tXoVNKU: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] opu2tXoVNKU: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] Rqv5fu1PCXA: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] Rqv5fu1PCXA: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] Rqv5fu1PCXA: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] Rqv5fu1PCXA: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] Rqv5fu1PCXA: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] ab8V7MYQVyg: This video is unavailable
+ERROR: [youtube] ab8V7MYQVyg: This video is unavailable
+ERROR: [youtube] ab8V7MYQVyg: This video is unavailable
+ERROR: [youtube] ab8V7MYQVyg: This video is unavailable
+ERROR: [youtube] ab8V7MYQVyg: This video is unavailable
+ERROR: [youtube] RxBFh-zdid4: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] RxBFh-zdid4: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] RxBFh-zdid4: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] RxBFh-zdid4: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] RxBFh-zdid4: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] LRfVQsnaVQE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] LRfVQsnaVQE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] LRfVQsnaVQE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] vsDriIwNAmU: This video is unavailable
+ERROR: [youtube] LRfVQsnaVQE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] vsDriIwNAmU: This video is unavailable
+ERROR: [youtube] LRfVQsnaVQE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] vsDriIwNAmU: This video is unavailable
+ERROR: [youtube] vsDriIwNAmU: This video is unavailable
+ERROR: [youtube] vsDriIwNAmU: This video is unavailable
+ERROR: [youtube] IbJh1xeBFcI: This video is unavailable
+ERROR: [youtube] 7B1OAtD_VIA: Requested format is not available. Use --list-formats for a list of available formats
+ERROR: [youtube] IbJh1xeBFcI: This video is unavailable
+ERROR: [youtube] AFWy1qyyMHE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] IbJh1xeBFcI: This video is unavailable
+ERROR: [youtube] AFWy1qyyMHE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] 7B1OAtD_VIA: Requested format is not available. Use --list-formats for a list of available formats
+ERROR: [youtube] IbJh1xeBFcI: This video is unavailable
+ERROR: [youtube] AFWy1qyyMHE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] 7B1OAtD_VIA: Requested format is not available. Use --list-formats for a list of available formats
+ERROR: [youtube] IbJh1xeBFcI: This video is unavailable
+ERROR: [youtube] AFWy1qyyMHE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] 7B1OAtD_VIA: Requested format is not available. Use --list-formats for a list of available formats
+ERROR: [youtube] AFWy1qyyMHE: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] 7B1OAtD_VIA: Requested format is not available. Use --list-formats for a list of available formats
+ERROR: [youtube] FYwDTJtEzhk: This video is no longer available due to a copyright claim by TOKYO BROADCASTING SYSTEM, INC.
+ERROR: [youtube] Vi2posMLsrg: This video is unavailable
+ERROR: [youtube] FYwDTJtEzhk: This video is no longer available due to a copyright claim by TOKYO BROADCASTING SYSTEM, INC.
+ERROR: [youtube] Vi2posMLsrg: This video is unavailable
+ERROR: [youtube] FYwDTJtEzhk: This video is no longer available due to a copyright claim by TOKYO BROADCASTING SYSTEM, INC.
+ERROR: [youtube] Vi2posMLsrg: This video is unavailable
+ERROR: [youtube] FYwDTJtEzhk: This video is no longer available due to a copyright claim by TOKYO BROADCASTING SYSTEM, INC.
+ERROR: [youtube] Vi2posMLsrg: This video is unavailable
+ERROR: [youtube] FYwDTJtEzhk: This video is no longer available due to a copyright claim by TOKYO BROADCASTING SYSTEM, INC.
+ERROR: [youtube] Vi2posMLsrg: This video is unavailable
+ERROR: [youtube] eHeUipPZHIc: This video contains content from SVG Music, who has blocked it on copyright grounds
+ERROR: [youtube] eHeUipPZHIc: This video contains content from SVG Music, who has blocked it on copyright grounds
+ERROR: [youtube] eHeUipPZHIc: This video contains content from SVG Music, who has blocked it on copyright grounds
+ERROR: [youtube] eHeUipPZHIc: This video contains content from SVG Music, who has blocked it on copyright grounds
+ERROR: [youtube] eHeUipPZHIc: This video contains content from SVG Music, who has blocked it on copyright grounds
+ERROR: [youtube] lTLsL94ABRs: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] asYb6iDz_kM: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] lTLsL94ABRs: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] asYb6iDz_kM: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] lTLsL94ABRs: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] asYb6iDz_kM: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] lTLsL94ABRs: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] asYb6iDz_kM: This video is private. If the owner of this video has granted you access, please sign in.
+ERROR: [youtube] lTLsL94ABRs: This video is no longer available because the YouTube account associated with this video has been terminated.
+ERROR: [youtube] asYb6iDz_kM: This video is private. If the owner of this video has granted you access, please sign in.

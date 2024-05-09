@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+*.wav
+music_data/
+data/
+
 # Distribution / packaging
 .Python
 build/
