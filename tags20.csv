@@ -1,0 +1,392 @@
+﻿count
+0;simple percussion;43
+1;slow tempo;457
+2;bass;152
+3;instrumental;871
+4;no voice;74
+5;amateur recording;490
+6;reverb;53
+7;backing track;22
+8;digital drums;118
+9;piano;230
+10;e-bass;222
+11;trumpet;38
+12;acoustic guitar;281
+13;medium tempo;600
+14;no other instruments;124
+15;fast tempo;374
+16;white noise;26
+17;bass guitar;285
+18;keyboard harmony;162
+19;slick drumming;28
+20;live performance;271
+21;poor audio quality;235
+22;ambient noises;21
+23;hissing tones;23
+24;male singer;193
+25;groovy bass line;125
+26;keyboard accompaniment;113
+27;home video;45
+28;higher register;22
+29;pop;141
+30;punchy kick;52
+31;claps;23
+32;emotional;392
+33;sad;43
+34;passionate;299
+35;ambient sounds;31
+36;brass;32
+37;double bass;23
+38;strings;112
+39;percussion;178
+40;home music video;22
+41;energetic;376
+42;ambient room noises;21
+43;folk song;37
+44;male voice;190
+45;moderate tempo;185
+46;r&b;55
+47;soul;31
+48;male vocal;200
+49;melodic singing;126
+50;strong bass;31
+51;electronic drums;184
+52;sensual;28
+53;groovy;207
+54;urban;47
+55;male vocalist;109
+56;medium fast tempo;95
+57;electric guitar;291
+58;groovy bass lines;25
+59;blues;44
+60;vocalisation;51
+61;meditative;53
+62;devotional;47
+63;inspiring;50
+64;motivational;24
+65;steady drumming rhythm;85
+66;easygoing;105
+67;melancholic;106
+68;tabla;43
+69;upbeat;157
+70;joyful;49
+71;atmospheric;28
+72;cinematic;52
+73;calming;99
+74;cymbals;30
+75;stringed instrument;34
+76;vibrato;22
+77;sonic power;35
+78;amplified guitar;26
+79;vigorous;45
+80;intense;105
+81;rock;132
+82;hard rock;57
+83;home recording;33
+84;electronic dance music;43
+85;scratching;31
+86;synth;53
+87;eerie;63
+88;male voice singing;96
+89;harp;43
+90;male vocals;48
+91;aggressive;72
+92;story telling;44
+93;instrumental music;257
+94;suspense;34
+95;string section harmony;22
+96;festive;24
+97;female vocal;101
+98;positive;55
+99;e-guitars;38
+100;acoustic drums;388
+101;female voice singing;65
+102;uptempo;218
+103;female voice;85
+104;funny;21
+105;country music;45
+106;fiddle;25
+107;sentimental;100
+108;classical;69
+109;single instrument;52
+110;catchy;52
+111;happy;110
+112;perky;23
+113;punchy;60
+114;lively;123
+115;synthesiser arrangements;58
+116;lullaby;28
+117;dreamy;46
+118;nostalgic;34
+119;cello;65
+120;medium to uptempo;127
+121;live recording;70
+122;duet;25
+123;trumpets;60
+124;vocal harmony;80
+125;male voices;27
+126;hip-hop;55
+127;electronic;35
+128;female singer;101
+129;high notes;23
+130;choral harmony;22
+131;ethereal;36
+132;melodic;68
+133;celestial;21
+134;inferior audio quality;39
+135;accordion;48
+136;e-guitar;147
+137;guitar solo;62
+138;keyboard;131
+139;psychedelic;70
+140;trap;23
+141;trance;41
+142;enthusiastic;142
+143;spirited;192
+144;intense drumming;21
+145;ukulele;20
+146;movie soundtrack;57
+147;philharmonic orchestra;28
+148;average audio quality;30
+149;mysterious;42
+150;tuba;27
+151;sitar;24
+152;no singer;126
+153;relaxing;100
+154;meditation;30
+155;synth sounds;52
+156;no percussion;102
+157;tambourine percussions;22
+158;love song;75
+159;romantic;186
+160;groovy music;50
+161;soothing;110
+162;drums;81
+163;synth bass;48
+164;electronic music;131
+165;futuristic;26
+166;engaging;69
+167;captivating;31
+168;dance groove;59
+169;electro pop;33
+170;synthesiser articulation;37
+171;dance pop;24
+172;edm;58
+173;pleasant;59
+174;ambient;65
+175;rap;42
+176;hip hop;23
+177;rapping;23
+178;hip;30
+179;saxophone;49
+180;uplifting energy;23
+181;bad audio quality;85
+182;soloist;36
+183;programmed percussion;47
+184;epic;33
+185;dramatic;40
+186;backup singers;39
+187;live audience;59
+188;piano accompaniment;82
+189;groovy rhythm;67
+190;dance song;27
+191;organ;39
+192;passionate male vocal;20
+193;heartfelt;25
+194;string section;55
+195;movie music;33
+196;clarinet;34
+197;sound effects;72
+198;ominous;25
+199;rock music;36
+200;tutorial;24
+201;loud;120
+202;generic;25
+203;upright bass;59
+204;country;20
+205;banjo;53
+206;acoustic piano;52
+207;violin;66
+208;soft rock;26
+209;punchy snare;56
+210;shimmering hi hats;38
+211;female vocalist;42
+212;classical music;67
+213;western classical;23
+214;violins;43
+215;brass band;43
+216;orchestra;65
+217;jam;54
+218;trippy;54
+219;electric guitar lead;25
+220;steady drumming;77
+221;funky;29
+222;pop rock;28
+223;youthful;200
+224;rhythmic acoustic guitar;30
+225;guitar lead;29
+226;cymbals crashing;23
+227;strong bass line;40
+228;flute;82
+229;bluegrass;24
+230;mandolin;40
+231;playful;75
+232;uplifting;35
+233;guitar;40
+234;jazz;55
+235;soulful;30
+236;gospel;30
+237;choir;24
+238;spiritual;27
+239;female vocals;23
+240;percussive bass line;47
+241;exciting;120
+242;theremin;27
+243;guitar accompaniment;52
+244;chimes;24
+245;repeated theme;50
+246;latin music;20
+247;shakers;25
+248;congas;32
+249;bongos;32
+250;latin dance music;26
+251;vibrant;124
+252;techno;41
+253;pop song;47
+254;shaker;40
+255;buoyant;75
+256;simple melody;32
+257;cheerful;154
+258;foreign language;56
+259;folk;24
+260;regional music;27
+261;infectious drumming;20
+262;rich;23
+263;synth pad;26
+264;poignant;43
+265;jazz music;22
+266;groovy bass;62
+267;dulcet;24
+268;world music;32
+269;atmospheric synthesiser;21
+270;vocal backup;50
+271;higher pitch;24
+272;entertaining;22
+273;no voices;177
+274;happy mood;43
+275;soft;69
+276;minimalist;39
+277;fun;55
+278;childrenâ€™s song;20
+279;compelling;20
+280;electro;24
+281;addictive;31
+282;dance rhythm;59
+283;mellow;121
+284;classic rock;20
+285;metal;33
+286;acoustic guitars;23
+287;viola;22
+288;ballad;31
+289;bells;31
+290;club music;76
+291;electronica;20
+292;synthesiser arrangement;42
+293;hypnotic;43
+294;simple;36
+295;scary;35
+296;dark;28
+297;sinister;42
+298;spooky;27
+299;marimba;22
+300;experimental;27
+301;unique;22
+302;guitar rhythm;35
+303;folk music;57
+304;clapping;41
+305;cheering;22
+306;people talking;49
+307;concert;33
+308;vivacious;43
+309;distorted electric guitar;29
+310;violent;24
+311;chaotic;31
+312;male voices singing;33
+313;heavy metal;45
+314;boomy;23
+315;rhythmic;25
+316;dj;97
+317;dance;83
+318;jingle;23
+319;simple tune;39
+320;dangerous;21
+321;danceable;45
+322;religious;34
+323;indian music;20
+324;meditation music;29
+325;pensive;30
+326;string instruments;24
+327;conductor;24
+328;western classical music;33
+329;static;33
+330;electronic sounds;20
+331;meditational;22
+332;video game music;21
+333;harpsichord;29
+334;enigmatic;22
+335;eccentric;21
+336;trance music;23
+337;melodious;32
+338;muffled audio;26
+339;haunting;27
+340;alternative rock;27
+341;violin harmony;26
+342;mellifluous;26
+343;slower tempo;25
+344;tambourine beats;36
+345;timpani;23
+346;harmonica;31
+347;pop music;40
+348;xylophone;31
+349;dance music;120
+350;minimal instruments;29
+351;peppy;27
+352;"percussions";23
+353;synthesizer;23
+354;synth pop;36
+355;brass instruments;22
+356;wind instrument;41
+357;animated;58
+358;dance floor;23
+359;calm;40
+360;gentle;30
+361;didgeridoo;37
+362;smooth;23
+363;adrenaline rush;25
+364;funk;25
+365;reggae;44
+366;tambourine;73
+367;people dancing;36
+368;string instrument;32
+369;emphatic;24
+370;dance hits;20
+371;romantic mood;24
+372;pulsating;27
+373;drum machine;41
+374;digital drum;21
+375;powerful;42
+376;peaceful;26
+377;chanting;21
+378;crowd cheering;29
+379;dj mixer;31
+380;synth pads;21
+381;brass section;42
+382;grim;25
+383;vibrations;26
+384;male voice speaking;29
+385;turntable;24
+386;trombone;32
+387;bass drum;26
+388;chill;34
+389;orchestral;23
+390;solo;21
