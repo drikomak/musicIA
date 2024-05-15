@@ -47,19 +47,20 @@ class MusicCapsDataset(torch.utils.data.Dataset):
 
     def extract_audio_features(self, audio_path):
         y, sr = librosa.load(audio_path, sr=None)
-        n_fft = 1024  # Set n_fft to match win_length
+        n_fft = 1024
         hop_length = 512
         stft = librosa.stft(y, n_fft=n_fft, hop_length=hop_length, win_length=n_fft)
         stft_magnitude, stft_phase = librosa.magphase(stft)
         stft_magnitude_db = librosa.amplitude_to_db(stft_magnitude)
-        
-        # Do not trim the frequency bins
+        stft_magnitude_db = (stft_magnitude_db - np.min(stft_magnitude_db)) / (np.max(stft_magnitude_db) - np.min(stft_magnitude_db))
+        print(f"Audio features shape: {stft_magnitude_db.T.shape}")
         return torch.tensor(stft_magnitude_db.T, dtype=torch.float32)
 
 
     def extract_caption_features(self, caption):
         input_ids = self.tokenizer(caption, return_tensors='pt').input_ids
         outputs = self.model(input_ids=input_ids)
+        print(f"Caption features shape: {outputs.last_hidden_state.shape}")
         return outputs.last_hidden_state.squeeze(0)
 
 class MusicGenerationModel(nn.Module):
@@ -88,15 +89,32 @@ def custom_collate(batch):
 def train_model(data_loader, model, criterion, optimizer, num_epochs=10):
     model.train()
     for epoch in range(num_epochs):
-        for text_features, audio_features in data_loader:
-            if text_features is None:
+        running_loss = 0.0
+        for i, batch in enumerate(data_loader):
+            if batch is None:
                 continue
+            text_features, audio_features = batch
+
+            # Debugging: Print batch shapes
+            print(f"Epoch {epoch+1}, Batch {i+1}")
+            print(f"Text features shape: {text_features.shape}")
+            print(f"Audio features shape: {audio_features.shape}")
+
             optimizer.zero_grad()
             output = model(text_features)
             loss = criterion(output, audio_features)
             loss.backward()
             optimizer.step()
-        print(f'Epoch {epoch+1}, Loss: {loss.item()}')
+            running_loss += loss.item()
+
+            # Debugging: Print loss for each batch
+            print(f"Batch {i+1}, Loss: {loss.item()}")
+
+        epoch_loss = running_loss / len(data_loader)
+        print(f'Epoch {epoch+1}, Loss: {epoch_loss:.4f}')
+
+        # Optionally save model checkpoint here
+        torch.save(model.state_dict(), f'model_epoch_{epoch+1}.pt')
 
 def generate_music(prompt):
     global model
@@ -106,11 +124,15 @@ def generate_music(prompt):
         t5_model = T5EncoderModel.from_pretrained('t5-small')
         input_ids = tokenizer(prompt, return_tensors='pt').input_ids
         text_features = t5_model(input_ids=input_ids).last_hidden_state
+        print(f"Text features shape: {text_features.shape}")
+        print(f"Text features content: {text_features}")
 
         # Debugging: Check the shape of text features
         print(f"Text features shape: {text_features.shape}")
 
         generated_audio_features = model(text_features)
+        print(f"Generated audio features shape: {generated_audio_features.shape}")
+        print(f"Generated audio features content: {generated_audio_features}")
 
         # Debugging: Check the shape of generated audio features
         print(f"Generated audio features shape: {generated_audio_features.shape}")
@@ -163,4 +185,4 @@ criterion = nn.MSELoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
 # Train the model
-train_model(data_loader, model, criterion, optimizer)
+train_model(data_loader, model, criterion, optimizer, num_epochs=10)

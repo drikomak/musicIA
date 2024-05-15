@@ -12,8 +12,7 @@ class MusicCapsDataset(Dataset):
     def __init__(self, csv_file, root_dir):
         self.data_frame = pd.read_csv(csv_file)
         self.root_dir = root_dir
-        self.audio_extensions = ['.wav']  # Assurez-vous que ces extensions couvrent tous vos cas
-
+        self.audio_extensions = ['.wav'] 
     def __len__(self):
         return len(self.data_frame)
 
@@ -60,7 +59,6 @@ data_loader = DataLoader(music_dataset, batch_size=2, shuffle=True, collate_fn=c
 for audios, captions in data_loader:
     if audios.nelement() == 0:
         continue
-
     print("Forme des données audio:", audios.shape)
     print("Type des données audio:", audios.dtype)
     print("Légendes:", captions)
@@ -71,4 +69,6 @@ for audios, captions in data_loader:
     plt.colorbar()
     plt.show()
     break  # Afficher seulement le premier batch valide
+
+
 
