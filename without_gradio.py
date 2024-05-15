@@ -11,6 +11,11 @@ import soundfile as sf
 from transformers import T5Tokenizer, T5EncoderModel
 from tqdm import tqdm  
 
+
+cache = {}
+is_cache = True
+max_cache = 3000
+
 class MusicCapsDataset(torch.utils.data.Dataset):
     def __init__(self, csv_file, root_dir, sequence_length=100, device="cpu"):
         self.data_frame = pd.read_csv(csv_file)
@@ -29,9 +34,15 @@ class MusicCapsDataset(torch.utils.data.Dataset):
             audio_path = self.find_audio_file(idx)
             if (audio_path is None):
                 raise FileNotFoundError
+            if is_cache and idx in cache:
+                return cache[idx]
+            
             audio_features = self.extract_audio_features(audio_path)
             caption = self.data_frame.iloc[idx]['caption']
             caption_features = self.extract_caption_features(caption)
+
+            if is_cache and len(cache) < max_cache:
+                cache[idx] = (audio_features, caption_features)
             return audio_features, caption_features
         except FileNotFoundError:
             print(f"Audio file not found for index {idx}.")
@@ -113,7 +124,7 @@ def train_model(data_loader, model, criterion, optimizer, num_epochs=10, save_pa
             optimizer.zero_grad()
             output = model(text_features)
             loss = criterion(output, audio_features)
-            loss.backward()
+            loss.backward(retain_graph=is_cache)
             optimizer.step()
             running_loss += loss.item()
 
@@ -168,17 +179,17 @@ if __name__ == "__main__":
     device = "cuda" if torch.cuda.is_available() else "cpu"
     model = MusicGenerationModel(text_feature_dim=512, audio_feature_dim=512, hidden_dim=256).to(device)
 
-    path = "model_checkpoint.pth"
+    path = "model15.pth"
     if os.path.exists(path):
         model.load_state_dict(torch.load(path))
     else:
-        music_dataset = MusicCapsDataset(csv_file='musiccaps-public.csv', root_dir='music_data', device=device)
+        music_dataset = MusicCapsDataset(csv_file='musiccaps-public-flawless.csv', root_dir='music_data', device=device)
         data_loader = DataLoader(music_dataset, batch_size=2, shuffle=True, collate_fn=custom_collate)
 
         criterion = nn.MSELoss()
         optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
-        train_model(data_loader, model, criterion, optimizer, num_epochs=10, device=device)
+        train_model(data_loader, model, criterion, optimizer, num_epochs=10, device=device, save_path=path)
 
     prompt = "A calm and relaxing piano melody with soft background strings."
     audio_file_path = generate_music(prompt, model, device=device)

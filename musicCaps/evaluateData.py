@@ -17,14 +17,14 @@ def toCSV(final,fileName):
 
     ajout_key=""
     for key in final[0].keys():
-        ajout_key=f"{key};"
+        ajout_key+=f"{key},"
 
     file.write(ajout_key[:-1])
 
     for i in range(len(final)):
         ajout_value=""
         for value in final[i].values():
-            ajout_value+=f"{value};"
+            ajout_value+=f"{value},"
 
         file.write("\n"+ajout_value[:-1])
 
@@ -70,4 +70,26 @@ for i in data:
         m += 1
     
 
-toCSV(l,"tags20")
+# toCSV(l,"tags20")
+
+table = readCSV("musiccaps-public-filter")
+nt = []
+import os
+for i in table:
+    if os.path.exists(f"music_data/{i['ytid']}.wav"):
+        i["audioset_positive_labels"] = f'"{i["audioset_positive_labels"]}"'
+
+        if i["caption"].find('"') != -1:
+           i["caption"] = i["caption"].replace('"', '""') 
+
+        if i["aspect_list"].find('"') != -1:
+           i["aspect_list"] = i["aspect_list"].replace('"', '""') 
+           
+        i["aspect_list"] = f'"{i["aspect_list"]}"'
+        i["caption"] = f'"{i["caption"]}"'
+
+        
+        nt.append(i)
+
+toCSV(nt, "musiccaps-public-flawless")
+        
