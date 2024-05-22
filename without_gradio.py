@@ -183,7 +183,7 @@ if __name__ == "__main__":
     if os.path.exists(path):
         model.load_state_dict(torch.load(path))
     else:
-        music_dataset = MusicCapsDataset(csv_file='musiccaps-public-flawless.csv', root_dir='music_data', device=device)
+        music_dataset = MusicCapsDataset(csv_file='musiccaps-public-tiny.csv', root_dir='music_data', device=device)
         data_loader = DataLoader(music_dataset, batch_size=2, shuffle=True, collate_fn=custom_collate)
 
         criterion = nn.MSELoss()
