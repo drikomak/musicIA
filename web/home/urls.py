@@ -6,4 +6,5 @@ import home
 urlpatterns = [
     path('', views.index),
     path('api/', views.api),
+    path('cam/', views.camera),
 ]

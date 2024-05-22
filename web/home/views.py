@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from home.func import initModel, gen, randomID
+from home.func import getEmotion, initModel, gen, randomID
 
 ids = []
 model = None
@@ -25,6 +25,9 @@ def api(request):
         return render(request, "home/error.html", {}) 
     
     return render(request, "home/audio.html", {"path":path, "prompt":prompt})
+
+def camera(request):
+    return render(request, "home/face.html", {"emotion":getEmotion()}) 
 
 
 ids, model = initModel(init)
