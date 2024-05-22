@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+    {% load static %}
+
+    <style>
+        .htmx-settling img {
+            opacity: 0;
+        }
+        img {
+            transition: opacity 300ms ease-in;
+        }
+    </style>
+</head>
+<body>
+    <form hx-get="api" hx-target="#audio" hx-swap="outerHTML">
+        <img  alt="Result loading..." width="150" class="htmx-indicator" src="{% static 'home/load.gif' %}"/>
+        <input type="text" name="prompt" id="prompt">
+        <input type="submit">
+    </form>
+
+    <div id="audio"></div>
+</body>
+</html>
