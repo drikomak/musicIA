@@ -5,28 +5,124 @@ html {
 
 body {
     margin: 0;
+    overflow-y: hidden;
 }
 
 .snaping {
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    height: 100vh;
+    height: calc(100vh - 74px);
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .snaping-element {
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 74px);
     scroll-snap-align: start;
 }
 
 #head-projet {
-    height: 20%;
+    height: 15%;
     background-color: black;
     color:#E5F8FF;
     text-align: center;
+
+    p {
+        margin: 0 400px;
+        font-size: 16px;
+    }
+}
+
+#playground {
+    background-color: white;
+    height: 85%;
+    color:#2A145A;
+    text-align:center;
+
 }
 
 h1 {
     font-weight: lighter;
-    margin: 20px;
+    font-size: 36px;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 32px;
+    padding-top: 25px;
+}
+
+nav img {
+    height: 30px;
+}
+
+#generator {
+    display: grid;
+    grid-template-columns: 5fr 1fr 5fr;
+    margin: 0 400px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+    }
+
+    input {
+        border-radius: 10px;
+        border:solid 2px #2A145A;
+        margin: 10px;
+        margin-left: 0;
+        font-family: "Roboto", Arial, Helvetica, sans-serif;
+    }
+
+    input[type=button] {
+        background-color: #2A145A;
+        color:#FFF;
+        width: 100px;
+        padding: 5px 10px
+    }
+
+    input[type=text] {
+        height: 20px;
+        padding: 5px 10px
+    }
+
+    p {
+        font-weight: bold;
+    }
+
+    .trait {
+        margin: auto;
+    }
+
+    #prompt {
+        height: 100px;
+    }
+
+    label {
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: -5px;
+    }
+
+    .dual {
+        display: flex;
+        flex-direction: row;
+
+        div {
+            width: 50%;
+        }
+    }
+}
+
+.trait {
+    height: 50px;
+    border: solid 1px #2A145A;
+    width: 0;
 }

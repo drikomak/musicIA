@@ -52,22 +52,54 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quaerat ut expedita blanditiis assumenda ab ducimus harum itaque, doloremque corrupti cupiditate sint, quam asperiores qui ea molestias amet recusandae soluta?</p>
             </div>
 
-            <div>
+            <div id="playground">
+                <h2>À vous de jouer !</h2>
+                <div id="generator">
+                    <div>
+                        <p>Générez depuis votre propre prompt</p>
+                        <label for="prompt">Écrivez une phrase pour décrire la musique que vous voulez entendre</label>
+                        <input type="text" name="prompt" id="prompt">
+                        <input type="button" value="GÉNÉRER">
+                    </div>
 
+                    <div class="trait"></div>
+
+                    <div>
+                        <p>Générez depuis des paramètres</p>
+
+                        <label for="instruments">Instruments</label>
+                        <input type="text" name="instruments" id="instruments">
+                        
+                        <div class="dual">
+                            <div>
+                                <label for="emotions">Émotion</label>
+                                <input type="text" name="emotions" id="emotions">
+                            </div>
+
+                            <div>
+                                <label for="name">Votre nom pour la gloire</label>
+                                <input type="text" name="name" id="name">
+                            </div>
+                        </div>
+                        
+
+                        <input type="button" value="GÉNÉRER">
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="snaping-element" style="background-color: black;"></div>
+        <div class="snaping-element" style="background-color: #0C32A4;"></div>
         <div class="snaping-element" style="background-color: blue;"> </div>
     </div>
 
 
-    <form hx-get="api" hx-target="#audio" hx-swap="outerHTML">
+    <!-- <form hx-get="api" hx-target="#audio" hx-swap="outerHTML">
         <img  alt="Result loading..." width="150" class="htmx-indicator" src="{% static 'home/load.gif' %}"/>
         <input type="text" name="prompt" id="prompt">
         <input type="submit">
     </form>
 
-    <div id="audio"></div>
+    <div id="audio"></div> -->
 
     <!-- <video id="camerafeed" autoplay controls=""></video>
 
