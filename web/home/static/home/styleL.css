@@ -28,7 +28,7 @@ body {
 }
 
 #head-projet {
-    height: 15%;
+    height: 150px;
     background-color: black;
     color:#E5F8FF;
     text-align: center;
@@ -41,7 +41,7 @@ body {
 
 #playground {
     background-color: white;
-    height: 85%;
+    height: 100%;
     color:#2A145A;
     text-align:center;
 
@@ -50,16 +50,13 @@ body {
 h1 {
     font-weight: lighter;
     font-size: 36px;
+    padding-top: 20px;
 }
 
 h2 {
     font-weight: 300;
     font-size: 32px;
     padding-top: 25px;
-}
-
-nav img {
-    height: 30px;
 }
 
 #generator {
@@ -85,7 +82,8 @@ nav img {
         background-color: #2A145A;
         color:#FFF;
         width: 100px;
-        padding: 5px 10px
+        padding: 5px 10px;
+        cursor: pointer;
     }
 
     input[type=text] {

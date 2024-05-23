@@ -8,19 +8,27 @@ img {
 
 nav {
     display: flex;
-    flex-direction: row; 
     color: white;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center; 
     gap: 15px;
-}
 
+    div {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        width: 300px;
+        justify-content: center;
+        margin: 0 20px;
+    }
 
-nav div {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    align-items: center;
+    .right-nav {
+        justify-content: end;
+    }
+
+    .left-nav {
+        justify-content: start;
+    }
 }
 
 
