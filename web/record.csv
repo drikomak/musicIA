@@ -1,6 +1,6 @@
-id;path;prompt;time
-RNNMD;RNNMD.wav;happy piano melody;1716380369.5202796
-VDCVJ;VDCVJ.wav;melancolic modern rock ;1716382347.637311
-YNZER;YNZER.wav;melancolic modern rock ;1716382587.2917998
-HBQSY;HBQSY.wav;melancolic modern rock ;1716383103.0970523
-JWFYK;JWFYK.wav;melancolic modern rock ;1716383774.7215126
+id;path;prompt;time;user
+RNNMD;RNNMD.wav;happy piano melody;1716380369.5202796;none
+VDCVJ;VDCVJ.wav;melancolic modern rock ;1716382347.637311;none
+YNZER;YNZER.wav;melancolic modern rock ;1716382587.2917998;none
+HBQSY;HBQSY.wav;melancolic modern rock ;1716383103.0970523;none
+JWFYK;JWFYK.wav;melancolic modern rock ;1716383774.7215126;none

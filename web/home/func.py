@@ -9,9 +9,18 @@ from random import choice
 import cv2
 from deepface import DeepFace
 
+# Pour l'alienware seulement
+os.environ["TRANSFORMERS_CACHE"] = "D:/hughub"
+os.environ["HF_HOME"] = "D:/hughub"
+
+# pour 15sec d'audio
+# small : 1min 02sec
+# medium : 3min
+# large : 
+
 def initModel(init=False):
     if init:
-        model = musicgen.MusicGen.get_pretrained("small", device="cpu")
+        model = musicgen.MusicGen.get_pretrained("small", device="cuda" if torch.cuda.is_available() else "cpu")
         model.set_generation_params(duration = 15)
     else:
         model = None
@@ -21,32 +30,27 @@ def initModel(init=False):
 
     return ids, model
 
-def addRecord(path, prompt, maxi=5):
+def addRecord(path, prompt, user="Inconnu"):
     records = pd.read_csv("record.csv", sep=";")
     add = pd.DataFrame([{"id":path, 
                          "path":f"{path}.wav", 
                          "prompt":prompt, 
                          "time":time.time(),
+                         "user":user
                          }])
     r = pd.concat([records,add])
-
-    while len(r) > maxi:
-        p = r.path[0]
-        r = r.drop([0])
-        os.remove(f"media/{p}")
-
     r.to_csv("record.csv", sep=';', index=False)
 
 def gen(model, prompt, path):
-    try:
+    # try:
         res = model.generate([prompt], progress = True)
         for idx, one_wav in enumerate(res):
             audio_write(f"media/{path}", one_wav.cpu(), model.sample_rate, strategy="loudness")
         addRecord(path, prompt)
         return True
-    except Exception as e:
-        print(e)
-        return False
+    # except Exception as e:
+    #     print(e)
+    #     return False
 
 def randomID(length=5):
     st = ""
