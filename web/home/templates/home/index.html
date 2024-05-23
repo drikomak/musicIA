@@ -6,6 +6,7 @@
     <title>Document</title>
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
     {% load static %}
+    <link rel="stylesheet" href="../../static/home/style.css">
 
     <style>
         .htmx-settling img {
@@ -17,6 +18,12 @@
     </style>
 </head>
 <body>
+    <nav>
+        <img src="../../static/home/logo-delltech-header-white-300x39_1.png" alt="">
+        <img src="../../static/home/upvm3.png" alt="" height="60px">
+        <img src="../../static/home/miashs_logo.png" alt="" height="85">
+        <p>test</p>
+    </nav>
     <form hx-get="api" hx-target="#audio" hx-swap="outerHTML">
         <img  alt="Result loading..." width="150" class="htmx-indicator" src="{% static 'home/load.gif' %}"/>
         <input type="text" name="prompt" id="prompt">
