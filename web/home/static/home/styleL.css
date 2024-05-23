@@ -1,0 +1,32 @@
+html {
+    margin: 0;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.snaping {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.snaping-element {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+}
+
+#head-projet {
+    height: 20%;
+    background-color: black;
+    color:#E5F8FF;
+    text-align: center;
+}
+
+h1 {
+    font-weight: lighter;
+    margin: 20px;
+}

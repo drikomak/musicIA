@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
+
     {% load static %}
     <link rel="stylesheet" href="../../static/home/style.css">
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'home/favicon.ico' %}"/>
+    <link rel="stylesheet" href="{% static 'home/styleL.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
     <style>
         .htmx-settling img {
@@ -24,6 +32,23 @@
         <img src="../../static/home/miashs_logo.png" alt="" height="85">
         <p>test</p>
     </nav>
+    
+    <div class="snaping">
+        <div class="snaping-element">
+            <div id="head-projet">
+                <h1>Projet MusicIA</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quaerat ut expedita blanditiis assumenda ab ducimus harum itaque, doloremque corrupti cupiditate sint, quam asperiores qui ea molestias amet recusandae soluta?</p>
+            </div>
+
+            <div>
+
+            </div>
+        </div>
+        <div class="snaping-element" style="background-color: black;"></div>
+        <div class="snaping-element" style="background-color: blue;"> </div>
+    </div>
+
+
     <form hx-get="api" hx-target="#audio" hx-swap="outerHTML">
         <img  alt="Result loading..." width="150" class="htmx-indicator" src="{% static 'home/load.gif' %}"/>
         <input type="text" name="prompt" id="prompt">
