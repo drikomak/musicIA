@@ -2,17 +2,14 @@ body{
     background-color: black;
 }
 
-img {
-    max-width: 100%;
-}
+
 
 nav {
     display: flex;
     flex-direction: row; 
     color: white;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center; 
-    gap: 15px;
 }
 
 
@@ -24,5 +21,28 @@ nav div {
 }
 
 
+.wr-page2{
+    text-align: center;
+    color: white;
+}
 
+.par-btn {
+    text-align: center;
+}
 
+.par-btn button {
+    border:solid 2px white;
+    margin: 10px;
+    margin-left: 0;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    background-color: #0C32A4;
+    color:#FFF;
+    width: 100px;
+    border-radius: 10px;
+    padding: 5px 10px
+}
+
+.par-btn button:hover {
+    background-color: white;
+    color: #0C32A4;
+}
