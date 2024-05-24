@@ -1,3 +1,9 @@
+:root {
+    --margin:0 350px;
+}
+
+
+
 html {
     margin: 0;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
@@ -34,7 +40,7 @@ body {
     text-align: center;
 
     p {
-        margin: 0 400px;
+        margin: var(--margin);
         font-size: 16px;
     }
 }
@@ -62,7 +68,7 @@ h2 {
 #generator {
     display: grid;
     grid-template-columns: 5fr 1fr 5fr;
-    margin: 0 400px;
+    margin: var(--margin);
     transition: .5s all;
 
     div {
@@ -89,6 +95,7 @@ h2 {
     input[type=text] {
         height: 20px;
         padding: 5px 10px;
+        /* width:inherit */
     }
 
     p {
@@ -112,7 +119,6 @@ h2 {
     }
 
     .dual {
-        display: flex;
         flex-direction: row;
 
         div {
@@ -127,8 +133,10 @@ h2 {
     width: 0;
 }
 
+
+
 .result-audio {
-    margin: 0 400px;
+    margin: var(--margin);
     display: grid;
     grid-template-columns: min-content;
     align-items: center;
@@ -151,10 +159,21 @@ h2 {
     }
 }
 
+.warning {
+    background:linear-gradient(90deg, #691D3F  0%, #B30B37 100%);
+    
+    #playbutton {
+        grid-column: span 2;
+    }
+}
+
 .small-title {
     font-weight: bold;
     text-align: start;
-    margin: 15px 400px;
+    margin: var(--margin);
+
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .htmx-settling img {
@@ -182,3 +201,74 @@ img {
 .opa-min {
     opacity: 50%;
 }
+
+@media (max-width:1700px) {
+    :root {
+        --margin:0 200px
+    }
+}
+
+@media (max-width:1300px) {
+    :root {
+        --margin:0 100px
+    }
+}
+
+@media (max-width:1000px) {
+    :root {
+        --margin:0 50px
+    }
+}
+
+@media (max-height:760px) {
+    .snaping {
+        scroll-snap-type: none;
+        height: unset;
+        overflow-y: unset;
+    }
+
+    .snaping-element {
+        height: 700px;
+    }
+
+    body {
+        overflow-y: auto;
+    }
+}
+
+@media (max-width:900px) {
+    .snaping-element {
+        height: auto;
+    }
+
+    #generator {
+        grid-template-columns: unset;
+        gap:20px
+    }
+
+    .trait {
+        height: 0;
+        width: 250px;
+    }
+}
+
+@media (max-width:500px) {
+    :root {
+        --margin:0 25px
+    }
+}
+
+@media (max-width:470px) {
+    #generator {
+        .dual {
+            display: block;
+
+            div {
+                width: 100%;
+            }
+            
+        }
+    }
+    
+}
+
