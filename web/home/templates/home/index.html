@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="{% static 'home/script.js' %}"></script>
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
-
-    {% load static %}
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/7.7.15/wavesurfer.min.js" integrity="sha512-0zR0E1NB6jaFuUEh3NXPy5iVeBqVfT+6xrpHziR5W8YN5rQnN57rviT5DQ7bqIOgjpPnEtYd1+8ouVBDcyDRhQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
     <link rel="stylesheet" href="../../static/home/style.css">
-
     <link rel="shortcut icon" type="image/png" href="{% static 'home/favicon.ico' %}"/>
     <link rel="stylesheet" href="{% static 'home/styleL.css' %}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" crossorigin href="https://dds.dell.com/components/2.41.0/css/dds-icons.min.css" />
 
-    <style>
-        .htmx-settling img {
-            opacity: 0;
-        }
-        img {
-            transition: opacity 300ms ease-in;
-        }
-    </style>
+    <script>
+        $(document).ready(function() {
+            console.log('mdrr');
+            $(".gen").on("click", function() {
+                lazyLoad()
+            })
+        })
+    </script>
+
+
 </head>
 <body>
     <nav>
@@ -59,7 +65,7 @@
                         <p>Générez depuis votre propre prompt</p>
                         <label for="prompt">Écrivez une phrase pour décrire la musique que vous voulez entendre</label>
                         <input type="text" name="prompt" id="prompt">
-                        <input type="button" value="GÉNÉRER">
+                        <input class="gen" type="button" value="GÉNÉRER" hx-get="api" hx-trigger="click" hx-target="#htmxresult" hx-swap="outerHTML" hx-vals="js:{prompt: getValue('prompt')}">
                     </div>
 
                     <div class="trait"></div>
@@ -86,6 +92,28 @@
                         <input type="button" value="GÉNÉRER">
                     </div>
                 </div>
+
+                <div id="htmxresult" style="display:none">
+                    <p class="small-title">Résultat</p>
+                  
+                    <div class="result-audio">
+                        <audio id="audio" src="media/HBQSY.wav" type="audio/wav"></audio> 
+                  
+                        <div id="playbutton" class="dds__icon dds__icon--play-cir">
+                  
+                        </div>
+                  
+                        <div id="spectrum"></div>
+                  
+                        <p id="caption"></p>
+                    </div>
+                  
+
+                    <script>
+                        addAudioWave()             
+                    </script>
+                </div>
+
             </div>
         </div>
         <div class="snaping-element" style="background-color: #0C32A4;">

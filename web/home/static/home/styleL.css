@@ -41,7 +41,7 @@ body {
 
 #playground {
     background-color: white;
-    height: 100%;
+    height: calc(100% - 150px);
     color:#2A145A;
     text-align:center;
 
@@ -63,6 +63,7 @@ h2 {
     display: grid;
     grid-template-columns: 5fr 1fr 5fr;
     margin: 0 400px;
+    transition: .5s all;
 
     div {
         display: flex;
@@ -74,7 +75,6 @@ h2 {
         border-radius: 10px;
         border:solid 2px #2A145A;
         margin: 10px;
-        margin-left: 0;
         font-family: "Roboto", Arial, Helvetica, sans-serif;
     }
 
@@ -88,11 +88,12 @@ h2 {
 
     input[type=text] {
         height: 20px;
-        padding: 5px 10px
+        padding: 5px 10px;
     }
 
     p {
         font-weight: bold;
+        margin-left:10px ;
     }
 
     .trait {
@@ -107,6 +108,7 @@ h2 {
         font-weight: bold;
         font-size: 14px;
         margin-bottom: -5px;
+        margin-left: 10px;
     }
 
     .dual {
@@ -123,4 +125,60 @@ h2 {
     height: 50px;
     border: solid 1px #2A145A;
     width: 0;
+}
+
+.result-audio {
+    margin: 0 400px;
+    display: grid;
+    grid-template-columns: min-content;
+    align-items: center;
+    background:linear-gradient(90deg, rgba(13,33,85,1) 0%, rgba(12,50,164,1) 100%);
+    color:white;
+    border-radius: 10px;
+    gap:10px;
+    padding: 10px;
+
+    #playbutton {
+        font-size: 35px;
+        justify-self: center;
+        color:#E5F8FF;
+        cursor: pointer;
+    }
+
+    p {
+        grid-column: span 2;
+        margin:0;
+    }
+}
+
+.small-title {
+    font-weight: bold;
+    text-align: start;
+    margin: 15px 400px;
+}
+
+.htmx-settling img {
+    opacity: 0;
+}
+
+img {
+    transition: opacity 300ms ease-in;
+}
+
+@keyframes opacity-load {
+    from {
+        opacity: 100%;
+    }
+
+    to {
+        opacity: 50%;
+    }
+}
+
+.anim {
+    animation: 1.5s linear infinite alternate opacity-load;
+}
+
+.opa-min {
+    opacity: 50%;
 }

@@ -1,6 +1,23 @@
-<div id="audio">
-    <audio controls>
-        <source src="media/{{ path }}.wav" type="audio/wav">
-      Your browser does not support the audio element.
-      </audio> 
+<div id="htmxresult">
+  <p class="small-title">Résultat</p>
+
+  <div class="result-audio">
+      <audio id="audio" src="media/{{ path }}.wav" type="audio/wav"></audio> 
+
+      <div id="playbutton" class="dds__icon dds__icon--play-cir">
+
+      </div>
+
+      <div id="spectrum"></div>
+
+      <p id="caption">{{ prompt }}</p>
+
+      <script>
+        addAudioWave()
+        addControls()
+        endLoad()
+      </script>
+  </div>
+
+
 </div>
