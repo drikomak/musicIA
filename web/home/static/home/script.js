@@ -49,7 +49,7 @@ function lazyLoad() {
     $("#htmxresult").css("display","block")
     $("#caption-result").html("Résulat en cours de chargement...")
 
-    document.getElementById("audio").pause()
+    document.getElementById("audio-result").pause()
 
     $("#audio-result").off("play")
     $("#audio-result").off("pause")

@@ -1,4 +1,4 @@
-<div id="htmxresult">
+<div id="htmxresult" hx-swap-oob="outerHTML">
   <p class="small-title">Résultat</p>
 
   <div class="result-audio">
@@ -18,6 +18,21 @@
         endLoad()
       </script>
   </div>
+</div>
 
+<div id="demo-container" hx-swap-oob="afterbegin">
+
+    <div class="small-result-audio">
+        <p>Créé par : {{ user }}</p>
+        <audio id="audio-{{ path }}" src="media/{{ path }}.wav"></audio>
+        <div id="playbutton-{{ path }}" class="dds__icon dds__icon--play-cir playbutton"></div>
+        <div id="spectrum-{{ path }}"></div>
+        <p>{{ prompt }}</p>
+
+        <script>
+            addAudioWave("{{ path }}")     
+            addControls("{{ path }}")        
+        </script>
+    </div>
 
 </div>

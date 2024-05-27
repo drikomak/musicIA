@@ -42,6 +42,8 @@ def index(request):
                         break
     else:
         return HttpResponse("Le chemin des médias n'existe pas.")
+    
+    available_audio_files.reverse()
 
     return render(request, 'home/index.html', {'audio_files': available_audio_files})
 
@@ -49,6 +51,8 @@ def api(request):
     
     prompt = request.GET.get('prompt', '')                  # Récupération du prompt
     user = request.GET.get('name', 'Inconnu') 
+
+    return render(request, "home/audio.html", {"path":"ABUQH", "prompt":prompt, "user":user})
 
     if not init or len(prompt) == 0:                        # Vérification que le modèle est lancé et que le prompt n'est pas vide
         return render(request, "home/error.html", {})
@@ -63,7 +67,7 @@ def api(request):
     if not gen(model, prompt, path, user):                        # Si la génération s'est bien passée
         return render(request, "home/error.html", {}) 
     
-    return render(request, "home/audio.html", {"path":path, "prompt":prompt})
+    return render(request, "home/audio.html", {"path":path, "prompt":prompt, "user":user})
 
 
 def camera(request):

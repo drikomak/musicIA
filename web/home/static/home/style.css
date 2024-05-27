@@ -95,9 +95,10 @@ nav {
 }
 
 .demonstrations {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    overflow-x: scroll;
+    grid-template-rows: 1fr 1fr 1fr;
+    display: grid;
+    grid-auto-flow: column;
     gap: 30px;
 }
 

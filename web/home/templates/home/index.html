@@ -134,7 +134,7 @@
                         <label for="name">Votre nom pour la gloire</label>
                         <input type="text" name="name" id="name" placeholder="Pour la postérité...">
                     
-                        <input class="gen" type="button" value="GÉNÉRER" hx-get="categ" hx-trigger="click" hx-target="#htmxresult" hx-swap="outerHTML" hx-vals="js:{instruments: getValue('instruments'), genre: getValue('genre'), emotion: getValue('emotion'), name: getValue('name')}">
+                        <input class="gen" type="button" value="GÉNÉRER" hx-get="categ" hx-trigger="click" hx-swap-oob="true" hx-vals="js:{instruments: getValue('instruments'), genre: getValue('genre'), emotion: getValue('emotion'), name: getValue('name')}">
                     </div>
                 </div>
 
@@ -168,7 +168,7 @@
                 <!-- Afficher les audios ici -->
                 {% for audio in audio_files %}
                     <div class="small-result-audio">
-                        <p>{{ audio.user }}</p>
+                        <p>Créé par : {{ audio.user }}</p>
                         <audio id="audio-{{ audio.id }}" src="{{ audio.url }}"></audio>
                         <div id="playbutton-{{ audio.id }}" class="dds__icon dds__icon--play-cir playbutton"></div>
                         <div id="spectrum-{{ audio.id }}"></div>
