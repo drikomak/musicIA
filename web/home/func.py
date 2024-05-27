@@ -41,12 +41,12 @@ def addRecord(path, prompt, user="Inconnu"):
     r = pd.concat([records,add])
     r.to_csv("record.csv", sep=';', index=False)
 
-def gen(model, prompt, path):
+def gen(model, prompt, path, user):
     # try:
         res = model.generate([prompt], progress = True)
         for idx, one_wav in enumerate(res):
             audio_write(f"media/{path}", one_wav.cpu(), model.sample_rate, strategy="loudness")
-        addRecord(path, prompt)
+        addRecord(path, prompt, user)
         return True
     # except Exception as e:
     #     print(e)

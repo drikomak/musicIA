@@ -5,7 +5,8 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MusicIA</title>
+
     <script src="{% static 'home/script.js' %}"></script>
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
@@ -63,9 +64,14 @@
                 <div id="generator">
                     <div>
                         <p>Générez depuis votre propre prompt</p>
+
                         <label for="prompt">Écrivez une phrase pour décrire la musique que vous voulez entendre</label>
-                        <input type="text" name="prompt" id="prompt">
-                        <input class="gen" type="button" value="GÉNÉRER" hx-get="api" hx-trigger="click" hx-target="#htmxresult" hx-swap="outerHTML" hx-vals="js:{prompt: getValue('prompt')}">
+                        <input type="text" name="prompt" id="prompt" placeholder="Par exemple : 'melancolic hard rock with huge bass'">
+
+                        <label for="name">Votre nom pour la gloire</label>
+                        <input type="text" name="name" id="name" placeholder="Pour être exposé dans notre galerie d'art !">
+                        
+                        <input class="gen" type="button" value="GÉNÉRER" hx-get="api" hx-trigger="click" hx-target="#htmxresult" hx-swap="outerHTML" hx-vals="js:{prompt: getValue('prompt'), name: getValue('name')}">
                     </div>
 
                     <div class="trait"></div>
@@ -83,10 +89,13 @@
                             </div>
 
                             <div>
-                                <label for="name">Votre nom pour la gloire</label>
+                                <label for="name">BPM</label>
                                 <input type="text" name="name" id="name">
                             </div>
                         </div>
+
+                        <label for="name">Votre nom pour la gloire</label>
+                        <input type="text" name="name" id="name" placeholder="Pour la postérité...">
                         
 
                         <input type="button" value="GÉNÉRER">

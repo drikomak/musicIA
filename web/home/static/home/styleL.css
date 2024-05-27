@@ -272,3 +272,6 @@ img {
     
 }
 
+::placeholder {
+    font-style: italic;
+}
