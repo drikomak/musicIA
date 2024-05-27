@@ -135,7 +135,8 @@
                 <!-- Afficher les audios ici -->
                 {% for audio in audio_files %}
                     <div class="audio-card">
-                        <p>{{ audio.name }}</p>
+                        <p></p>
+                        <p>artiste : {{ audio.user }}</p>
                         <audio controls>
                             <source src="{{ audio.url }}" type="audio/wav">
                         </audio>
@@ -144,27 +145,5 @@
                 {% endfor %}
             </div>
         </div>
-
-     
-
-    <!-- <form hx-get="api" hx-target="#audio" hx-swap="outerHTML">
-        <img  alt="Result loading..." width="150" class="htmx-indicator" src="{% static 'home/load.gif' %}"/>
-        <input type="text" name="prompt" id="prompt">
-        <input type="submit">
-    </form>
-
-    <div id="audio"></div> -->
-
-    <!-- <video id="camerafeed" autoplay controls=""></video>
-
-    <script>
-        navigator.mediaDevices.getUserMedia({ video: true })
-            .then(function (stream) {
-                document.getElementById('camerafeed').srcObject = stream;
-            })
-            .catch(function (error) {
-                console.log('Camera access error:', error);
-            });
-    </script> -->
 </body>
 </html>

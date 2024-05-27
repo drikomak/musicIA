@@ -23,6 +23,7 @@ def index(request):
                 audio_data.append({
                     'name': row['path'],  # Assuming 'path' contains the file name
                     'prompt': row['prompt'],
+                    'user': row['user'], 
                     'url': os.path.join(settings.MEDIA_URL, row['path'])
                 })
     except FileNotFoundError:
