@@ -5,51 +5,49 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MusicIA</title>
-
+    <title>Document</title>
     <script src="{% static 'home/script.js' %}"></script>
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/7.7.15/wavesurfer.min.js" integrity="sha512-0zR0E1NB6jaFuUEh3NXPy5iVeBqVfT+6xrpHziR5W8YN5rQnN57rviT5DQ7bqIOgjpPnEtYd1+8ouVBDcyDRhQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Include full jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/7.7.15/wavesurfer.min.js"></script>
     
-    <link rel="stylesheet" href="../../static/home/style.css">
+    <link rel="stylesheet" href="{% static 'home/style.css' %}">
     <link rel="shortcut icon" type="image/png" href="{% static 'home/favicon.ico' %}"/>
     <link rel="stylesheet" href="{% static 'home/styleL.css' %}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" crossorigin href="https://dds.dell.com/components/2.41.0/css/dds-icons.min.css" />
 
     <script>
         $(document).ready(function() {
-            console.log('mdrr');
+            console.log('Document is ready');
             $(".gen").on("click", function() {
                 lazyLoad()
-            })
-        })
+            });
+        });
     </script>
 
 
 </head>
 <body>
     <nav>
-                <div class="left-nav">
-                <img src="../../static/home/logo-delltech-header-white-300x39_1.png" alt="logo dell">
-                <p>| </p>
-                <p>MUSICIA</p>
-                </div>
-                
-                <div>
-                <p>ACCUEIL</p>
-                <p>EXEMPLES</p>
-                <P>ABOUT</P>
-                </div>
-
-                <div class="right-nav">
-                <img src="../../static/home/upvm3.png" alt="logo paul va" height="40px">
-                <img src="../../static/home/miashs_logo.png" alt="logo miashs" height="65">
-                </div>
+        <div class="left-nav">
+            <img src="{% static 'home/logo-delltech-header-white-300x39_1.png' %}" alt="logo dell">
+            <p>| </p>
+            <p>MUSICIA</p>
+        </div>
+        <div>
+            <p>ACCUEIL</p>
+            <p>EXEMPLES</p>
+            <P>ABOUT</P>
+        </div>
+        <div class="right-nav">
+            <img src="{% static 'home/upvm3.png' %}" alt="logo paul va" height="40px">
+            <img src="{% static 'home/miashs_logo.png' %}" alt="logo miashs" height="65">
+        </div>
     </nav>
     
     <div class="snaping">
@@ -133,11 +131,21 @@
                 <button>PAR VOUS</button>
             </div>
         
+            <div id="demo-container" class="demonstrations">
+                <!-- Afficher les audios ici -->
+                {% for audio in audio_files %}
+                    <div class="audio-card">
+                        <p>{{ audio.name }}</p>
+                        <audio controls>
+                            <source src="{{ audio.url }}" type="audio/wav">
+                        </audio>
+                        <p>{{ audio.prompt }}</p>
+                    </div>
+                {% endfor %}
+            </div>
         </div>
-        <div class="snaping-element" style="background-color: blue;"> </div>
-    </div>
 
-
+     
 
     <!-- <form hx-get="api" hx-target="#audio" hx-swap="outerHTML">
         <img  alt="Result loading..." width="150" class="htmx-indicator" src="{% static 'home/load.gif' %}"/>
