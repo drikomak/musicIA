@@ -71,13 +71,13 @@ h2 {
     margin: var(--margin);
     transition: .5s all;
 
-    div {
+    .section {
         display: flex;
         flex-direction: column;
         text-align: start;
     }
 
-    input {
+    input, select {
         border-radius: 10px;
         border:solid 2px #2A145A;
         margin: 10px;
@@ -103,6 +103,11 @@ h2 {
         margin-left:10px ;
     }
 
+    select {
+        background-color: unset;
+        padding: 7px 10px;
+    }
+
     .trait {
         margin: auto;
     }
@@ -125,6 +130,17 @@ h2 {
             width: 50%;
         }
     }
+
+    #instruments {
+        max-width: unset;
+    }
+
+    .vscomp-toggle-button {
+        border-radius: 10px;
+        border: 2px solid #2A145A;
+        margin: 10px;
+    }
+
 }
 
 .trait {
@@ -146,12 +162,24 @@ h2 {
     gap:10px;
     padding: 10px;
 
-    #playbutton {
-        font-size: 35px;
-        justify-self: center;
-        color:#E5F8FF;
-        cursor: pointer;
+    p {
+        grid-column: span 2;
+        margin:0;
     }
+}
+
+.small-result-audio {
+    margin: 0;
+    background-color: #1d50e0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: min-content;
+    align-items: center;
+    color:white;
+    border-radius: 10px;
+    gap:10px;
+    width: 300px;
 
     p {
         grid-column: span 2;
@@ -159,10 +187,17 @@ h2 {
     }
 }
 
+.playbutton {
+    font-size: 35px;
+    justify-self: center;
+    color:#E5F8FF;
+    cursor: pointer;
+}
+
 .warning {
     background:linear-gradient(90deg, #691D3F  0%, #B30B37 100%);
     
-    #playbutton {
+    .playbutton {
         grid-column: span 2;
     }
 }
@@ -274,4 +309,8 @@ img {
 
 ::placeholder {
     font-style: italic;
+}
+
+.demonstrations {
+    margin:var(--margin)
 }

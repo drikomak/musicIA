@@ -12,7 +12,6 @@ init = True
 
 # Create your views here.
 
-
 def index(request):
     audio_data = []
 
@@ -21,6 +20,7 @@ def index(request):
             reader = csv.DictReader(csvfile, delimiter=';')
             for row in reader:
                 audio_data.append({
+                    'id':row["id"],
                     'name': row['path'],  # Assuming 'path' contains the file name
                     'prompt': row['prompt'],
                     'user': row['user'], 
@@ -65,9 +65,32 @@ def api(request):
     
     return render(request, "home/audio.html", {"path":path, "prompt":prompt})
 
+
 def camera(request):
     return render(request, "home/face.html", {"emotion":getEmotion()})
 
+
+def categ(request):
+    
+    genre = request.GET.get('genre', '')
+    emotion = request.GET.get('emotion', '')
+    user = request.GET.get('name', 'Inconnu')
+    instruments = request.GET.get('instruments', '')
+
+    prompt = f"{emotion} {genre}"
+    
+    if instruments != '':
+        prompt += f" with {instruments}"
+
+    path = randomID()                                       # Création d'un ID unique
+    while path in ids:
+        path = randomID()
+    ids.add(path)
+
+    if not gen(model, prompt, path, user):                        # Si la génération s'est bien passée
+        return render(request, "home/error.html", {}) 
+    
+    return render(request, "home/audio.html", {"path":path, "prompt":prompt})
 
 
 def get_audio_files(request):

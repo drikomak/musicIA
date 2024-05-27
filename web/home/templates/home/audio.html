@@ -2,19 +2,19 @@
   <p class="small-title">Résultat</p>
 
   <div class="result-audio">
-      <audio id="audio" src="media/{{ path }}.wav" type="audio/wav"></audio> 
+      <audio id="audio-result" src="media/{{ path }}.wav" type="audio/wav"></audio> 
 
-      <div id="playbutton" class="dds__icon dds__icon--play-cir">
+      <div id="playbutton-result" class="playbutton dds__icon dds__icon--play-cir">
 
       </div>
 
-      <div id="spectrum"></div>
+      <div id="spectrum-result"></div>
 
-      <p id="caption">{{ prompt }}</p>
+      <p id="caption-result">{{ prompt }}</p>
 
       <script>
-        addAudioWave()
-        addControls()
+        addAudioWave("result")
+        addControls("result")
         endLoad()
       </script>
   </div>

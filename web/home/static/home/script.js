@@ -1,8 +1,8 @@
-function addAudioWave() {
-    var audio = document.getElementById("audio")
+function addAudioWave(id) {
+    var audio = document.getElementById("audio-"+id)
     
     const wavesurfer = WaveSurfer.create({
-        container: "#spectrum",
+        container: "#spectrum-"+id,
         height: 50,
         waveColor: "#999",
         progressColor: "#FFF",
@@ -18,10 +18,10 @@ function addAudioWave() {
     })
 }
 
-function addControls() {
-    var audio = $("#audio")
-    var audioDOM = document.getElementById("audio")
-    var button = $("#playbutton")
+function addControls(id) {
+    var audio = $("#audio-"+id)
+    var audioDOM = document.getElementById("audio-"+id)
+    var button = $("#playbutton-"+id)
 
     $(button).on("click", function () {
         if (audioDOM.paused) {
@@ -47,13 +47,13 @@ function lazyLoad() {
     $("#generator").addClass("opa-min")
     $("#htmxresult").addClass("anim")
     $("#htmxresult").css("display","block")
-    $("#caption").html("Résulat en cours de chargement...")
+    $("#caption-result").html("Résulat en cours de chargement...")
 
     document.getElementById("audio").pause()
 
-    $("#audio").off("play")
-    $("#audio").off("pause")
-    $("#playbutton").off("click")
+    $("#audio-result").off("play")
+    $("#audio-result").off("pause")
+    $("#playbutton-result").off("click")
 }
 
 function endLoad() {
@@ -64,5 +64,5 @@ function endLoad() {
 
 function getValue(param) {
     var p = document.getElementById(param)
-    return p.value
+    return p.value.toString()
 }

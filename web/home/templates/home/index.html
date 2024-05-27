@@ -12,14 +12,19 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/7.7.15/wavesurfer.min.js"></script>
     
+    <link rel="stylesheet" crossorigin href="https://dds.dell.com/components/2.41.0/css/dds-icons.min.css" />
     <link rel="stylesheet" href="{% static 'home/style.css' %}">
     <link rel="shortcut icon" type="image/png" href="{% static 'home/favicon.ico' %}"/>
     <link rel="stylesheet" href="{% static 'home/styleL.css' %}">
+    <link rel="stylesheet" href="{% static 'home/virtual-select.min.css' %}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" crossorigin href="https://dds.dell.com/components/2.41.0/css/dds-icons.min.css" />
+    
+
+
+    <script src="{% static 'home/virtual-select.min.js' %}"></script>
 
     <script>
         $(document).ready(function() {
@@ -60,7 +65,7 @@
             <div id="playground">
                 <h2>À vous de jouer !</h2>
                 <div id="generator">
-                    <div>
+                    <div class="section">
                         <p>Générez depuis votre propre prompt</p>
 
                         <label for="prompt">Écrivez une phrase pour décrire la musique que vous voulez entendre</label>
@@ -74,29 +79,62 @@
 
                     <div class="trait"></div>
 
-                    <div>
+                    <div class="section">
                         <p>Générez depuis des paramètres</p>
-
-                        <label for="instruments">Instruments</label>
-                        <input type="text" name="instruments" id="instruments">
                         
-                        <div class="dual">
-                            <div>
-                                <label for="emotions">Émotion</label>
-                                <input type="text" name="emotions" id="emotions">
+                        <label for="instruments">Instruments</label>
+                        <div id="instruments"></div>
+
+                        <script>
+                            // https://www.cssscript.com/select-box-virtual-scroll/
+                            myOptions = [
+                                { label: 'Guitare', value: 'guitar'},
+                                { label: 'Batterie', value: 'drums'},
+                                { label: 'Piano', value: 'piano'},
+                                { label: 'Violon', value: 'violin'},
+                            ]
+
+                            VirtualSelect.init({ 
+                                ele: '#instruments',
+                                options:myOptions,
+                                multiple: true,
+                                search:false,
+                            });
+                        </script>
+                        
+                        <div class="section dual">
+                            <div class="section">
+                                <label for="genre">Genre</label>
+                                <select name="genre" id="genre">
+                                    <option value="" selected>Aucun</option>
+                                    <option value="rock">Rock</option>
+                                    <option value="jazz">Jazz</option>
+                                    <option value="rap">Rap</option>
+                                    <option value="classic">Classic</option>
+                                    <option value="metal">Metal</option>
+                                    <option value="pop">Pop</option>
+                                </select>
+                                
                             </div>
 
-                            <div>
-                                <label for="name">BPM</label>
-                                <input type="text" name="name" id="name">
+                            <div class="section">
+                                <label for="emotion">Émotion</label>
+                                <select name="emotion" id="emotion">
+                                    <option value="" selected>Aucune</option>
+                                    <option value="joyful">Joyful</option>
+                                    <option value="happy">Happy</option>
+                                    <option value="sad">Sad</option>
+                                    <option value="melancolic">Melancolic</option>
+                                    <option value="angry">Angry</option>
+                                    <option value="enrageous">Enrageous</option>
+                                </select>
                             </div>
                         </div>
 
                         <label for="name">Votre nom pour la gloire</label>
                         <input type="text" name="name" id="name" placeholder="Pour la postérité...">
-                        
-
-                        <input type="button" value="GÉNÉRER">
+                    
+                        <input class="gen" type="button" value="GÉNÉRER" hx-get="categ" hx-trigger="click" hx-target="#htmxresult" hx-swap="outerHTML" hx-vals="js:{instruments: getValue('instruments'), genre: getValue('genre'), emotion: getValue('emotion'), name: getValue('name')}">
                     </div>
                 </div>
 
@@ -104,20 +142,15 @@
                     <p class="small-title">Résultat</p>
                   
                     <div class="result-audio">
-                        <audio id="audio" src="media/HBQSY.wav" type="audio/wav"></audio> 
-                  
-                        <div id="playbutton" class="dds__icon dds__icon--play-cir">
-                  
-                        </div>
-                  
-                        <div id="spectrum"></div>
-                  
-                        <p id="caption">CECI EST UN BRAQUAGE</p>
+                        <audio id="audio-result" src="media/HBQSY.wav" type="audio/wav"></audio> 
+                        <div id="playbutton-result" class="playbutton dds__icon dds__icon--play-cir"></div>
+                        <div id="spectrum-result"></div>
+                        <p id="caption-result">CECI EST UN BRAQUAGE</p>
                     </div>
                   
 
                     <script>
-                        addAudioWave()             
+                        addAudioWave("result")             
                     </script>
                 </div>
 
@@ -134,16 +167,21 @@
             <div id="demo-container" class="demonstrations">
                 <!-- Afficher les audios ici -->
                 {% for audio in audio_files %}
-                    <div class="audio-card">
-                        <p></p>
-                        <p>artiste : {{ audio.user }}</p>
-                        <audio controls>
-                            <source src="{{ audio.url }}" type="audio/wav">
-                        </audio>
+                    <div class="small-result-audio">
+                        <p>{{ audio.user }}</p>
+                        <audio id="audio-{{ audio.id }}" src="{{ audio.url }}"></audio>
+                        <div id="playbutton-{{ audio.id }}" class="dds__icon dds__icon--play-cir playbutton"></div>
+                        <div id="spectrum-{{ audio.id }}"></div>
                         <p>{{ audio.prompt }}</p>
+
+                        <script>
+                            addAudioWave("{{ audio.id }}")     
+                            addControls("{{ audio.id }}")        
+                        </script>
                     </div>
                 {% endfor %}
             </div>
         </div>
+
 </body>
 </html>
