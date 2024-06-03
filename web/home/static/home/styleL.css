@@ -1,5 +1,5 @@
 :root {
-    --margin:0 350px;
+    --margin:0 25%;
 }
 
 
@@ -29,12 +29,12 @@ body {
 
 .snaping-element {
     width: 100vw;
-    height: calc(100vh - 74px);
+    height: calc(100vh - 76px);
     scroll-snap-align: start;
+    padding: 1px 0;
 }
 
 #head-projet {
-    height: 150px;
     background-color: black;
     color:#E5F8FF;
     text-align: center;
@@ -237,6 +237,12 @@ img {
     opacity: 50%;
 }
 
+@media (max-width:2200px) {
+    :root {
+        --margin:0 350px
+    }
+}
+
 @media (max-width:1700px) {
     :root {
         --margin:0 200px
@@ -313,4 +319,23 @@ img {
 
 .demonstrations {
     margin:var(--margin)
+}
+
+.navig {
+    cursor: pointer;
+}
+
+.cam-button {
+    width: 38.85px;
+    height: 35px;
+    align-self: end;
+    background-color: #2A145A;
+    border-radius: 10px;
+    margin: 10px;
+    margin-left:-5px;
+    color: white;
+    text-align: center;
+    align-content: center;
+    font-size: 20px;
+    cursor: pointer;
 }

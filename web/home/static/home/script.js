@@ -1,9 +1,9 @@
-function addAudioWave(id) {
+function addAudioWave(id, height) {
     var audio = document.getElementById("audio-"+id)
     
     const wavesurfer = WaveSurfer.create({
         container: "#spectrum-"+id,
-        height: 50,
+        height: height,
         waveColor: "#999",
         progressColor: "#FFF",
         cursorWidth: 0,
@@ -66,3 +66,20 @@ function getValue(param) {
     var p = document.getElementById(param)
     return p.value.toString()
 }
+
+$(document).ready(function () {
+    $(".navig").on("click", function () {
+        if (window.innerHeight > 760) {
+            let nb = $(this).data("index")
+            let el = document.getElementById('sn')
+            let h = el.clientHeight.toFixed(0)
+            console.log(nb, h, window.innerHeight);
+            
+            el.scroll({top:h*nb,behavior:"smooth"})
+        } else {
+            let nb = $(this).data("index")
+            document.getElementById("sn-"+nb).scrollIntoView()
+        }
+        
+    })
+})

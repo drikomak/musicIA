@@ -31,6 +31,7 @@ def initModel(init=False):
     return ids, model
 
 def addRecord(path, prompt, user="Inconnu"):
+    user = "Inconnu" if user == "" else user
     records = pd.read_csv("record.csv", sep=";")
     add = pd.DataFrame([{"id":path, 
                          "path":f"{path}.wav", 

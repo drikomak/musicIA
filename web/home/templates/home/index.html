@@ -5,11 +5,12 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MusicIA - 1.0</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="{% static 'home/script.js' %}"></script>
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
     <!-- Include full jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/7.7.15/wavesurfer.min.js"></script>
     
     <link rel="stylesheet" crossorigin href="https://dds.dell.com/components/2.41.0/css/dds-icons.min.css" />
@@ -41,13 +42,13 @@
     <nav>
         <div class="left-nav">
             <img src="{% static 'home/logo-delltech-header-white-300x39_1.png' %}" alt="logo dell">
-            <p>| </p>
+            <p>|</p>
             <p>MUSICIA</p>
         </div>
         <div>
-            <p>ACCUEIL</p>
-            <p>EXEMPLES</p>
-            <P>ABOUT</P>
+            <p data-index="0" class="navig">ACCUEIL</p>
+            <p data-index="1" class="navig">EXEMPLES</p>
+            <P data-index="2" class="navig">ABOUT</P>
         </div>
         <div class="right-nav">
             <img src="{% static 'home/upvm3.png' %}" alt="logo paul va" height="40px">
@@ -55,8 +56,8 @@
         </div>
     </nav>
     
-    <div class="snaping">
-        <div class="snaping-element">
+    <div class="snaping" id="sn">
+        <div class="snaping-element" id="sn-0">
             <div id="head-projet">
                 <h1>Projet MusicIA</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi quaerat ut expedita blanditiis assumenda ab ducimus harum itaque, doloremque corrupti cupiditate sint, quam asperiores qui ea molestias amet recusandae soluta?</p>
@@ -74,7 +75,7 @@
                         <label for="name">Votre nom pour la gloire</label>
                         <input type="text" name="name" id="name" placeholder="Pour être exposé dans notre galerie d'art !">
                         
-                        <input class="gen" type="button" value="GÉNÉRER" hx-get="api" hx-trigger="click" hx-target="#htmxresult" hx-swap="outerHTML" hx-vals="js:{prompt: getValue('prompt'), name: getValue('name')}">
+                        <input class="gen" type="button" value="GÉNÉRER" hx-get="api" hx-trigger="click" hx-swap-oob="true" hx-vals="js:{prompt: getValue('prompt'), name: getValue('name')}">
                     </div>
 
                     <div class="trait"></div>
@@ -106,7 +107,7 @@
                             <div class="section">
                                 <label for="genre">Genre</label>
                                 <select name="genre" id="genre">
-                                    <option value="" selected>Aucun</option>
+                                    <option value="" selected>Aléatoire</option>
                                     <option value="rock">Rock</option>
                                     <option value="jazz">Jazz</option>
                                     <option value="rap">Rap</option>
@@ -118,17 +119,22 @@
                             </div>
 
                             <div class="section">
+
+                                <!-- # angry, fear, neutral, sad, disgust, happy and surprise -->
                                 <label for="emotion">Émotion</label>
                                 <select name="emotion" id="emotion">
-                                    <option value="" selected>Aucune</option>
-                                    <option value="joyful">Joyful</option>
-                                    <option value="happy">Happy</option>
-                                    <option value="sad">Sad</option>
-                                    <option value="melancolic">Melancolic</option>
-                                    <option value="angry">Angry</option>
-                                    <option value="enrageous">Enrageous</option>
+                                    <option id="0" value="" selected>Neutre</option>
+                                    <option id="1" value="joyful">Joyful</option>
+                                    <option id="2" value="happy">Happy</option>
+                                    <option id="3" value="sad">Sad</option>
+                                    <option id="4" value="melancolic">Melancolic</option>
+                                    <option id="5" value="angry">Angry</option>
+                                    <option id="6" value="enrageous">Enrageous</option>
                                 </select>
                             </div>
+
+                            <!-- <span class="cam-button"></span> -->
+                            <span class="cam-button dds__icon dds__icon--camera" hx-get="/cam" hx-trigger="click"></span>
                         </div>
 
                         <label for="name">Votre nom pour la gloire</label>
@@ -150,19 +156,14 @@
                   
 
                     <script>
-                        addAudioWave("result")             
+                        addAudioWave("result", 50)             
                     </script>
                 </div>
 
             </div>
         </div>
-        <div class="snaping-element" style="background-color: #0C32A4;">
-            <h2 class="wr-page2">Demonstration</h2>
-
-            <div class="par-btn">
-                <button>PAR NOUS</button>
-                <button>PAR VOUS</button>
-            </div>
+        <div class="snaping-element" style="background-color: #0C32A4;" id="sn-1">
+            <h2 class="wr-page2">Démonstrations</h2>
         
             <div id="demo-container" class="demonstrations">
                 <!-- Afficher les audios ici -->
@@ -175,7 +176,7 @@
                         <p>{{ audio.prompt }}</p>
 
                         <script>
-                            addAudioWave("{{ audio.id }}")     
+                            addAudioWave("{{ audio.id }}", 30)     
                             addControls("{{ audio.id }}")        
                         </script>
                     </div>

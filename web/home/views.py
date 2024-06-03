@@ -50,9 +50,9 @@ def index(request):
 def api(request):
     
     prompt = request.GET.get('prompt', '')                  # Récupération du prompt
-    user = request.GET.get('name', 'Inconnu') 
+    user = request.GET.get('name', '') 
 
-    return render(request, "home/audio.html", {"path":"ABUQH", "prompt":prompt, "user":user})
+    # return render(request, "home/audio.html", {"path":"ABUQH", "prompt":"ttt", "user":"uuu"})
 
     if not init or len(prompt) == 0:                        # Vérification que le modèle est lancé et que le prompt n'est pas vide
         return render(request, "home/error.html", {})
@@ -78,13 +78,19 @@ def categ(request):
     
     genre = request.GET.get('genre', '')
     emotion = request.GET.get('emotion', '')
-    user = request.GET.get('name', 'Inconnu')
+    user = request.GET.get('name', '')
     instruments = request.GET.get('instruments', '')
 
     prompt = f"{emotion} {genre}"
     
     if instruments != '':
         prompt += f" with {instruments}"
+
+    if not init or len(prompt) == 0:
+        return render(request, "home/error.html", {}) 
+    
+    if len(user) == 0 or len(user) > 20:
+        user = "Inconnu"
 
     path = randomID()                                       # Création d'un ID unique
     while path in ids:
