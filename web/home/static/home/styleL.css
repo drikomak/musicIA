@@ -318,7 +318,17 @@ img {
 }
 
 .demonstrations {
-    margin:var(--margin)
+    margin:var(--margin);
+    padding: 10px 0;
+
+    -ms-overflow-style: unset;  /* IE and Edge */
+    scrollbar-width: unset;  /* Firefox */
+
+    ::-webkit-scrollbar {
+        display: unset;
+    }
+
+    
 }
 
 .navig {
@@ -352,8 +362,7 @@ img {
 }
 
 #camera-display {
-    width: 600px;
-    height: 430px;
+    width: min-content;
     border: solid #2A145A 2px;
     border-radius: 10px;
     display: flex;
@@ -363,26 +372,36 @@ img {
 #camera-top {
     background-color: #2A145A;
     color: white;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     padding: 10px;
     justify-content: center;
 
     p {
         margin: 0;
+        text-align: center;
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
+    span {
+        justify-self: end;
+        grid-column: 2;
+        grid-row: 1;
+        cursor: pointer;
     }
 }
 
 #camera-api {
-    height: 400px;
     background: white;
+    margin-bottom: -4px;
 }
 
 #camera-bottom {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
     align-items: center;
-    align-self: end;
+    /* align-self: end; */
 
     div {
         height: 60px;
@@ -399,5 +418,16 @@ img {
             align-self: center;
         }
     }
+
+    #capture, #redo, #validate {
+        cursor: pointer;
+    }
+
+    #validate, #info {
+        background-color: #1d50e0;
+    }
 }
 
+#canvas {
+    display: none;
+  }

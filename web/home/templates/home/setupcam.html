@@ -1,0 +1,21 @@
+<div id="camera-overlay">
+    <div id="camera-display">
+        <div id="camera-top">
+            <p>Émotion : ?</p>
+            <span class="dds__icon dds__icon--close-x" onclick="closeCam()"></span>
+        </div>
+
+        <div id="camera-api">
+            <video id="video">Video stream not available.</video>
+            <canvas id="canvas"> </canvas>
+        </div>
+        <div id="camera-bottom">
+            <div id="capture" hx-post="/cam/" hx-trigger="click" hx-target="#camera-overlay" hx-vals="js:{imageURL: takepicture()}" hx-swap="outerHTML"><p>CAPTURER</p></div>
+            <div id="info"><p>L'appareil va prendre une photo pour déterminer votre émotion actuelle, à l'aide de reconnaissance faciale.</p></div>
+        </div>
+
+        <script>
+            setupCamera()
+        </script>
+    </div>
+</div>

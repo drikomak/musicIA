@@ -1,3 +1,17 @@
-<div id="audio">
-    {{ emotion }}
+<div id="camera-overlay">
+    <div id="camera-display">
+        <div id="camera-top">
+            <p>Émotion : {{ emotion }}</p>
+            <span class="dds__icon dds__icon--close-x" onclick="closeCam()"></span>
+        </div>
+
+        <div id="camera-api">
+            <img src="{{ filename }}">
+        </div>
+
+        <div id="camera-bottom">
+            <div id="redo" hx-get="/setupcam" hx-trigger="click" hx-target="#camera-overlay" hx-swap="outerHTML"><p>REFAIRE</p></div>
+            <div id="validate"><p>VALIDER</p></div>
+        </div>
+    </div>
 </div>

@@ -68,8 +68,8 @@ function getValue(param) {
 }
 
 function setupCamera() {   
-    const width = 320; // We will scale the photo width to this
-    let height = 0; // This will be computed based on the input stream
+    let width = 640; // We will scale the photo width to this
+    let height = 480; // This will be computed based on the input stream
     
     let streaming = false;
 
@@ -84,15 +84,6 @@ function setupCamera() {
     
     video.addEventListener("canplay", (ev) => {
         if (!streaming) {
-            height = video.videoHeight / (video.videoWidth / width);
-
-            // Firefox currently has a bug where the height can't be read from
-            // the video, so we will make assumptions if this happens.
-
-            if (isNaN(height)) {
-                height = width / (4 / 3);
-            }
-
             video.setAttribute("width", width);
             video.setAttribute("height", height);
             canvas.setAttribute("width", width);
@@ -110,19 +101,21 @@ function clearphoto() {
     context.fillRect(0, 0, canvas.width, canvas.height);
 
     const data = canvas.toDataURL("image/png");
-    photo.setAttribute("src", data);
     return data
 }
 
 function takepicture() {
     const context = canvas.getContext("2d");
+    width = 640; height = 480;          // NE DEVRAIT PAS ETRE EN DUR !! CODE SELON MON PC PORTABLE, A REVOIR!!!!!!!!!!!!!!!!
     if (width && height) {
-        canvas.width = width;
+        canvas.width = width;         
         canvas.height = height;
         context.drawImage(video, 0, 0, width, height);
 
         const data = canvas.toDataURL("image/png");
-        photo.setAttribute("src", data);
+        // photo.setAttribute("src", data);
+
+        console.log(data);
 
         return data
     } else {
@@ -146,3 +139,12 @@ $(document).ready(function () {
         
     })
 })
+
+function closeCam() {
+    $("#camera-overlay").empty().css("display","none").removeClass("htmx-swapping")
+}
+
+function validatePic() {
+    closeCam()
+    $("#emotion").children()
+}

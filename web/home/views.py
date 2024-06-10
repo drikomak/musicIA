@@ -1,10 +1,11 @@
-import time
-from django.shortcuts import render
-from home.func import getEmotion, initModel, gen, randomID
+import csv
 import os
+from home.func import get_image_from_data_url, getEmotionSingle, initModel, gen, randomID
+
+from django.shortcuts import render
 from django.http import HttpResponse
 from django.conf import settings
-import csv
+from django.views.decorators.csrf import csrf_exempt
 
 ids = []
 model = None
@@ -69,10 +70,15 @@ def api(request):
     
     return render(request, "home/audio.html", {"path":path, "prompt":prompt, "user":user})
 
-
+@csrf_exempt
 def camera(request):
-    return render(request, "home/face.html", {"emotion":getEmotion()})
+    filename = get_image_from_data_url(request.POST.get('imageURL', ''))
+    emotion = getEmotionSingle(filename)
+    return render(request, "home/face.html", {"filename":filename, "emotion":emotion})
 
+@csrf_exempt
+def getCamera(request):
+    return render(request, "home/setupcam.html", {})
 
 def categ(request):
     

@@ -56,22 +56,7 @@
         </div>
     </nav>
 
-    <div id="camera-overlay">
-        <div id="camera-display">
-            <div id="camera-top">
-                <p>Emotion : ?</p>
-                <span class="dds__icon dds__icon--close-x" hx-get="/cam" hx-trigger="click"></span>
-            </div>
-
-            <div id="camera-api"><!-- CAMERA API --></div>
-            <div id="camera-bottom">
-                <div><p>CAPTURER</p></div>
-                <div><p>L'appareil va prendre une photo pour déterminer votre émotion actuelle, à l'aide de reconnaissance faciale.</p></div>
-            </div>
-            
-            
-        </div>
-    </div>
+    <div id="camera-overlay" style="display:none"></div>
     
     <div class="snaping" id="sn">
         <div class="snaping-element" id="sn-0">
@@ -156,7 +141,7 @@
                             </div>
 
                             <!-- <span class="cam-button"></span> -->
-                            <span class="cam-button dds__icon dds__icon--camera" hx-get="/cam" hx-trigger="click"></span>
+                            <span class="cam-button dds__icon dds__icon--camera" hx-get="/setupcam" hx-trigger="click" hx-target="#camera-overlay" hx-swap="outerHTML"></span>
                         </div>
 
                         <label for="name">Votre nom pour la gloire</label>
