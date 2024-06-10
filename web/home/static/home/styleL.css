@@ -339,3 +339,65 @@ img {
     font-size: 20px;
     cursor: pointer;
 }
+
+#camera-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 56;
+    background-color: #ffffff80;
+}
+
+#camera-display {
+    width: 600px;
+    height: 430px;
+    border: solid #2A145A 2px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#camera-top {
+    background-color: #2A145A;
+    color: white;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+
+    p {
+        margin: 0;
+    }
+}
+
+#camera-api {
+    height: 400px;
+    background: white;
+}
+
+#camera-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    align-self: end;
+
+    div {
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        background-color: #2A145A;
+        color: white;
+        padding: 0 5px;
+        font-size: 15px;
+
+        p {
+            margin: 0;
+            align-self: center;
+        }
+    }
+}
+
