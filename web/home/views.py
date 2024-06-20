@@ -1,5 +1,6 @@
 import csv
 import os
+import webbrowser
 from home.func import get_image_from_data_url, getEmotionSingle, initModel, gen, randomID
 
 from django.shortcuts import render
@@ -17,7 +18,7 @@ def index(request):
     audio_data = []
 
     try:
-        with open('record.csv', newline='', encoding='utf-8') as csvfile:
+        with open(settings.RECORD_PATH, newline='', encoding='utf-8') as csvfile:
             reader = csv.DictReader(csvfile, delimiter=';')
             for row in reader:
                 audio_data.append({
@@ -129,3 +130,4 @@ def get_audio_files(request):
     return render(request, 'audio_files.html', {'audio_files': audio_files})
 
 ids, model = initModel(init)
+webbrowser.open('http://127.0.0.1:8000', new=0)
