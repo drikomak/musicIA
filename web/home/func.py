@@ -1,3 +1,4 @@
+import shutil
 import os
 from django.conf import settings
 os.environ["TRANSFORMERS_CACHE"] = settings.MODEL_DIR
@@ -72,6 +73,8 @@ def get_image_from_data_url(data_url):
     image_bytes = base64.b64decode(_dataurl)
     image_stream = io.BytesIO(image_bytes)
     image = Image.open(image_stream)
+    shutil.rmtree("media/camera")
+    os.mkdir("media/camera")
     name = f"media/camera/{_filename}.{_extension}"
     image.save(name)
 
