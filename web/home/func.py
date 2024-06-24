@@ -1,6 +1,10 @@
+import os
+from django.conf import settings
+os.environ["TRANSFORMERS_CACHE"] = settings.MODEL_DIR
+os.environ["HF_HOME"] = settings.MODEL_DIR
+
 import pandas as pd
 import time
-import os
 import torch
 import cv2
 import base64, secrets, io
@@ -11,11 +15,6 @@ from string import ascii_uppercase
 from random import choice
 from deepface import DeepFace
 from PIL import Image
-
-
-# Pour l'alienware seulement
-os.environ["TRANSFORMERS_CACHE"] = "D:/hughub"
-os.environ["HF_HOME"] = "D:/hughub"
 
 # pour 15sec d'audio
 # small : 1min 02sec
@@ -29,14 +28,14 @@ def initModel(init=False):
     else:
         model = None
 
-    records = pd.read_csv("record.csv", sep=";")
+    records = pd.read_csv(settings.RECORD_PATH, sep=";")
     ids = records.id
 
     return ids, model
 
 def addRecord(path, prompt, user="Inconnu"):
     user = "Inconnu" if user == "" else user
-    records = pd.read_csv("record.csv", sep=";")
+    records = pd.read_csv(settings.RECORD_PATH, sep=";")
     add = pd.DataFrame([{"id":path, 
                          "path":f"{path}.wav", 
                          "prompt":prompt, 
@@ -44,7 +43,7 @@ def addRecord(path, prompt, user="Inconnu"):
                          "user":user
                          }])
     r = pd.concat([records,add])
-    r.to_csv("record.csv", sep=';', index=False)
+    r.to_csv(settings.RECORD_PATH, sep=';', index=False)
 
 def gen(model, prompt, path, user):
     # try:
