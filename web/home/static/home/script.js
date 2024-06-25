@@ -54,6 +54,8 @@ function lazyLoad() {
     $("#audio-result").off("play")
     $("#audio-result").off("pause")
     $("#playbutton-result").off("click")
+    $("#myProgress").css("display","block")
+    move()
 }
 
 function endLoad() {
@@ -148,3 +150,21 @@ function validatePic() {
     closeCam()
     $("#emotion").children()
 }
+
+function move() {
+
+      i = 1;
+      var elem = document.getElementById("myBar");
+      var width = 1;
+      var id = setInterval(frame, 10);
+      function frame() {
+        if (width >= 100) {
+          clearInterval(id);
+          i = 0;
+        } else {
+          width+=0.018;
+          elem.style.width = width + "%";
+        }
+      }
+    }
+  
