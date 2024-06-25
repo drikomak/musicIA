@@ -9,6 +9,10 @@ __pycache__/
 *.wav
 music_data/
 data/
+midi/
+drums/
+babyslakh_16k/
+web/model
 
 # Distribution / packaging
 .Python

@@ -30,39 +30,69 @@ function Invoke-Utility {
       try { & $exe $argsForExe } catch { Throw } # catch is triggered ONLY if $exe can't be found, never for errors reported by $exe itself
       if ($LASTEXITCODE) { Throw "$exe indicated failure (exit code $LASTEXITCODE; full command: $Args)." }
 }
-Set-Alias iu Invoke-Utility
 
-# taskkill /IM "powershell.exe" /F
-
-Install-Chocolatey
-choco feature enable -n=allowGlobalConfirmation
-choco install ffmpeg
-choco install git
-choco install python --version=3.10.11
-
-try {
-    Set-Location $Env:Programfiles
-    Remove-Item musicIA -Recurse -Force
-    iu git clone https://github.com/drikomak/musicIA.git
-    Set-Location musicIA
-    py -m venv venv
-    venv/Scripts/Activate.ps1
-} catch {
-    Write-Host -NoNewLine "Impossible de trouver le repo git.";
+function Write-ConsoleExit {
+    Write-Host -NoNewLine $Args -ForegroundColor Red;
+    $null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown');
     exit
 }
 
+function Write-Grey {
+    Write-Host $Args -ForegroundColor DarkGray
+}
 
+Set-Alias iu Invoke-Utility
+Set-Alias err Write-ConsoleExit
+Set-Alias log Write-Grey
+[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+
+log "/~/ MusicIA 1.1 Installer /~/ `n"
+log "/~/ Installation des dépendances de MusicIA. /~/"
+
+# Installation de Chocolatey, FFMPEG, GIT et Python (https://chocolatey.org/)
+Install-Chocolatey
+choco feature enable -n=allowGlobalConfirmation
+choco install ffmpeg git
+choco install python --version=3.10.11
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
+
+# Copie de l'application depuis Git vers le dossier Program Files (détection automatique)
+Set-Location $Env:Programfiles
+if (Test-Path "musicIA") {      # Si un dossier musicIA existe déjà, suppression et réinstallation
+    log " /~/ Installation de MusicIA déjà trouvée, réinstallation totale en cours. /~/"
+    Remove-Item musicIA -Recurse -Force
+}
+
+try {
+    iu git clone https://github.com/drikomak/musicIA.git
+    Set-Location musicIA
+} catch {
+    err "Impossible de trouver le repo git.";
+}
+
+log " /~/ Installation des Package Python /~/"
+
+# Création d'un environnement virtuel Python et activation
+try {
+    iu python3.10 -m venv venv
+    venv/Scripts/Activate.ps1
+} catch {
+    err "Impossible d'utiliser Python. Vérifiez que votre antivirus ne bloque pas le programme."
+}
+
+# Installation des Packages, selon si la machine possède un GPU NVIDIA ou non (pour profiter de CUDA)
 $gpu = (Get-WmiObject Win32_VideoController).Name
 If ($gpu -like '*NVIDIA*') {
-    pip install -r requirementsCUDA.txt
+    python3.10 -m pip install -r requirementsCUDA.txt
 } Else {
-    pip install -r requirementsCPU.txt
+    python3.10 -m pip install -r requirementsCPU.txt
 }
 
 Set-Location .\web
-py .\installmodel.py
 
-Write-Host -NoNewLine "MusicIA a bien été installé. Vous pouvez le lancer depuis le programme run.exe .";
+log " /~/ Installation du modèle MusicGen /~/"
+python3.10 .\installmodel.py
+deactivate
+
+log "/~/ MusicIA a bien été installé. Vous pouvez le lancer depuis le programme run.exe. /~/";
 $null = $Host.UI.RawUI.ReadKey('NoEcho,IncludeKeyDown');
-exit
