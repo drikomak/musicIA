@@ -2,31 +2,22 @@
 <html lang="en">
 <head>
     {% load static %}
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MusicIA - 1.0</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="{% static 'home/script.js' %}"></script>
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
-    <!-- Include full jQuery -->
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wavesurfer.js/7.7.15/wavesurfer.min.js"></script>
-    
     <link rel="stylesheet" crossorigin href="https://dds.dell.com/components/2.41.0/css/dds-icons.min.css" />
     <link rel="stylesheet" href="{% static 'home/style.css' %}">
     <link rel="shortcut icon" type="image/png" href="{% static 'home/favicon.ico' %}"/>
     <link rel="stylesheet" href="{% static 'home/styleL.css' %}">
     <link rel="stylesheet" href="{% static 'home/virtual-select.min.css' %}">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap" rel="stylesheet">
-    
-
-
     <script src="{% static 'home/virtual-select.min.js' %}"></script>
-
     <script>
         $(document).ready(function() {
             console.log('Document is ready');
@@ -35,8 +26,6 @@
             });
         });
     </script>
-
-
 </head>
 <body>
     <nav>
@@ -48,7 +37,9 @@
         <div>
             <p data-index="0" class="navig">ACCUEIL</p>
             <p data-index="1" class="navig">EXEMPLES</p>
-            <P data-index="2" class="navig">ABOUT</P>
+            <P data-index="2" class="navig">FONCTIONNEMENT</P>
+            <P data-index="4" class="navig">NOUS</P>
+
         </div>
         <div class="right-nav">
             <img src="{% static 'home/upvm3.png' %}" alt="logo paul va" height="40px">
@@ -58,6 +49,28 @@
 
     <div id="camera-overlay" style="display:none"></div>
     
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+    </div>
+    <div class="page-indicator" id="page-indicator">
+        <div class="page active" data-index="0">
+            <div class="dot"></div>
+            <span>Accueil</span>
+        </div>
+        <div class="page" data-index="1">
+            <div class="dot"></div>
+            <span>Exemples</span>
+        </div>
+        <div class="page" data-index="2">
+            <div class="dot"></div>
+            <span>Fonctionnement</span>
+        </div>
+        <div class="page" data-index="3">
+            <div class="dot"></div>
+            <span>Qui sommes-nous ?</span>
+        </div>
+    </div>
+    
     <div class="snaping" id="sn">
         <div class="snaping-element" id="sn-0">
             <div id="head-projet">
@@ -65,8 +78,6 @@
                 <p>Le Projet MusicIA est une solution innovante qui permet de générer de la musique à partir d'un simple prompt textuel. 
                     Utilisant des algorithmes avancés d'intelligence artificielle, cette plateforme traduit des descriptions et des instructions en compositions musicales uniques et personnalisées.
                     Morceaux originaux pour des films, des jeux vidéo, ou tout autre projet créatif, MusicIA offre une approche révolutionnaire pour transformer les idées en réalité sonore, l'outil parfait pour les musiciens et créateurs de contenue.
-                
-
                 </p>
             </div>
 
@@ -75,13 +86,10 @@
                 <div id="generator">
                     <div class="section">
                         <p>Générez depuis votre propre prompt</p>
-
                         <label for="prompt">Écrivez une phrase pour décrire la musique que vous voulez entendre</label>
                         <input type="text" name="prompt" id="prompt" placeholder="Par exemple : 'melancolic hard rock with huge bass'">
-
                         <label for="name">Votre nom pour la gloire</label>
                         <input type="text" name="name" id="name" placeholder="Pour être exposé dans notre galerie d'art !">
-                        
                         <input class="gen" type="button" value="GÉNÉRER" hx-get="api" hx-trigger="click" hx-swap-oob="true" hx-vals="js:{prompt: getValue('prompt'), name: getValue('name')}">
                     </div>
 
@@ -89,12 +97,9 @@
 
                     <div class="section">
                         <p>Générez depuis des paramètres</p>
-                        
                         <label for="instruments">Instruments</label>
                         <div id="instruments"></div>
-
                         <script>
-                            // https://www.cssscript.com/select-box-virtual-scroll/
                             myOptions = [
                                 { label: 'Guitare', value: 'guitar'},
                                 { label: 'Batterie', value: 'drums'},
@@ -104,15 +109,13 @@
                                 { label: 'Flûte', value: 'flute'},
                                 { label: 'Orchestre', value: 'orchestra'},
                             ]
-
                             VirtualSelect.init({ 
                                 ele: '#instruments',
-                                options:myOptions,
+                                options: myOptions,
                                 multiple: true,
-                                search:false,
+                                search: false,
                             });
                         </script>
-                        
                         <div class="section dual">
                             <div class="section">
                                 <label for="genre">Genre</label>
@@ -125,12 +128,8 @@
                                     <option value="metal">Metal</option>
                                     <option value="pop">Pop</option>
                                 </select>
-                                
                             </div>
-
                             <div class="section">
-
-                                <!-- # angry, fear, neutral, sad, disgust, happy and surprise -->
                                 <label for="emotion">Émotion</label>
                                 <select name="emotion" id="emotion">
                                     <option id="0" value="" selected>Neutre</option>
@@ -142,21 +141,16 @@
                                     <option id="6" value="enrageous">Enrageous</option>
                                 </select>
                             </div>
-
-                            <!-- <span class="cam-button"></span> -->
                             <span class="cam-button dds__icon dds__icon--camera" hx-get="/setupcam" hx-trigger="click" hx-target="#camera-overlay" hx-swap="outerHTML"></span>
                         </div>
-
                         <label for="name">Votre nom pour la gloire</label>
                         <input type="text" name="name" id="name" placeholder="Pour la postérité...">
-                    
                         <input class="gen" type="button" value="GÉNÉRER" hx-get="categ" hx-trigger="click" hx-swap-oob="true" hx-vals="js:{instruments: getValue('instruments'), genre: getValue('genre'), emotion: getValue('emotion'), name: getValue('name')}">
                     </div>
                 </div>
 
                 <div id="htmxresult" style="display: none;">
                     <p class="small-title">Résultat</p>
-                  
                     <div class="result-audio">
                         <audio id="audio-result" src="media/HBQSY.wav" type="audio/wav"></audio> 
                         <div id="playbutton-result" class="playbutton dds__icon dds__icon--play-cir"></div>
@@ -166,20 +160,15 @@
                             <div id="myBar"></div>
                         </div>
                     </div>
-                  
-
                     <script>
                         addAudioWave("result", 50)             
                     </script>
                 </div>
-
             </div>
         </div>
         <div class="snaping-element" style="background-color: #0C32A4;" id="sn-1">
             <h2 class="wr-page2">Démonstrations</h2>
-        
             <div id="demo-container" class="demonstrations">
-                <!-- Afficher les audios ici -->
                 {% for audio in audio_files %}
                     <div class="small-result-audio">
                         <p>Créé par : {{ audio.user }}</p>
@@ -187,7 +176,6 @@
                         <div id="playbutton-{{ audio.id }}" class="dds__icon dds__icon--play-cir playbutton"></div>
                         <div id="spectrum-{{ audio.id }}"></div>
                         <p>{{ audio.prompt }}</p>
-
                         <script>
                             addAudioWave("{{ audio.id }}", 30)     
                             addControls("{{ audio.id }}")        
@@ -196,21 +184,63 @@
                 {% endfor %}
             </div>
         </div>
-
-
-
+        <div class="snaping-element" id="fonctionnement">
+            <h2 class="fonctionnement-title">Fonctionnement</h2>
+            <div class="fonctionnement-container">
+                <div class="fonctionnement-card">
+                    <div class="fonctionnement-card-inner">
+                        <div class="fonctionnement-card-front">
+                            <img src="{% static 'home/icon-description.png' %}" alt="Description">
+                            <h3>Étape 1: Description</h3>
+                            <p>MusicIA, c'est quoi ?</p>
+                        </div>
+                        <div class="fonctionnement-card-back">
+                            <p>Le Projet MusicIA est une solution innovante qui permet de générer de la musique à partir d'un simple prompt textuel. 
+                                Utilisant des algorithmes avancés d'intelligence artificielle, cette plateforme traduit des descriptions et des instructions en compositions musicales uniques et personnalisées. 
+                                Morceaux originaux pour des films, des jeux vidéo, ou tout autre projet créatif, MusicIA offre une approche révolutionnaire pour transformer les idées en réalité sonore.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fonctionnement-card">
+                    <div class="fonctionnement-card-inner">
+                        <div class="fonctionnement-card-front">
+                            <img src="{% static 'home/icon-ai.png' %}" alt="Traitement AI">
+                            <h3>Étape 2: Traitement IA</h3>
+                            <p>Comment ça marche ?</p>
+                        </div>
+                        <div class="fonctionnement-card-back">
+                            <p>Après l'envoie du prompt, il est apprehendé et traité par l'algorithme de création de musique '<a href="https://huggingface.co/papers/2306.05284" target="_blank">MUSICGEN</a>' de MetaLab. <br>
+                                La plateforme génère la musique en utilisant des échantillons de haute qualité, mixant les différents éléments pour correspondre à votre description. <br>
+                                Chaque morceau est unique !</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="fonctionnement-card">
+                    <div class="fonctionnement-card-inner">
+                        <div class="fonctionnement-card-front">
+                            <img src="{% static 'home/icon-generation.png' %}" alt="Génération">
+                            <h3>Étape 3: Génération</h3>
+                            <p>Et ensuite ?</p>
+                        </div>
+                        <div class="fonctionnement-card-back">
+                            <p>Une fois la génération fini, pour garder une trace de vos créations, votre nom, le prompt ainsi que le son généré sont ajouté <br>
+                            dans notre base de donnée et affiché dans la section exemple du site.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="snaping-element">
-            <h2 class="wr-page3">Qui sommes nous ?</h2>
-            
+            <h2 class="wr-page3">L'équipe</h2>
             <div class="content-wrapper">
                 <div class="left-frame">
                     <div class="inner-frame">
                         <div class="numero numero1">
                             <details class="fenetre">
                                 <summary>
-                                    <h3>Numéro 1</h3>
+                                    <h3>L'équipe</h3>
                                     <img src="{% static 'home/usericon.png' %}" height="300px">
-                                    <p class="fenetre-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos itaque nostrum facere sequi...</p>
+                                    <p class="fenetre-content"></p>
                                     <span class="afficher-plus">afficher plus</span>
                                 </summary>
                                 <p class="full-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos itaque nostrum facere sequi, modi tempora ea incidunt laborum enim, fugiat quaerat in voluptate natus ipsam ex impedit. Praesentium, saepe nulla?</p>
@@ -220,12 +250,17 @@
                         <div class="numero numero2">
                             <details class="fenetre">
                                 <summary>
-                                    <h3>Numéro 2</h3>
-                                    <img src="{% static 'home/usericon.png' %}" height="300px">
-                                    <p class="fenetre-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos itaque nostrum facere sequi...</p>
+                                    <h3>La Licence MIASHS</h3>
+                                    <img src="{% static 'home/paulva_campus.jpg' %}" height="300px">
+                                    <p class="fenetre-content">La licence Miashs est une formation qui regroupe un ensemble de domaines scientifiques liés au traitement de l’information autour d’un objectif commun : 
+                                        l’étude des données issues des sciences humaines et sociales.
+                                        C’est une formation pluridisciplinaire en trois ans dont la forte composante en traitement de l’information s’appuie sur l’informatique, les mathématiques et la statistique (MIA).</p>
                                     <span class="afficher-plus">afficher plus</span>
                                 </summary>
-                                <p class="full-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos itaque nostrum facere sequi, modi tempora ea incidunt laborum enim, fugiat quaerat in voluptate natus ipsam ex impedit. Praesentium, saepe nulla?</p>
+                                <p class="full-content">La licence Miashs est une formation qui regroupe un ensemble de domaines scientifiques liés au traitement de l’information autour d’un objectif commun : 
+                                    l’étude des données issues des sciences humaines et sociales.
+                                    C’est une formation pluridisciplinaire en trois ans dont la forte composante en traitement de l’information s’appuie sur l’informatique, les mathématiques et la statistique (MIA).<br>
+                                    L’objectif de cette licence est donc de former des diplômés, interlocuteurs avertis capables de discuter avec des spécialistes des données SHS et des spécialistes informaticiens ou statisticiens afin d’arbitrer les choix technologiques.</p>
                                 <span class="afficher-moins">afficher moins</span>
                             </details>
                         </div>
@@ -239,7 +274,71 @@
                     </div>
                 </div>
             </div>
-        </div> 
-        
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var snapElements = document.querySelectorAll('.snaping-element');
+            var progressBar = document.getElementById('progress-bar');
+            var pageIndicators = Array.from(document.querySelectorAll('.page-indicator .page'));
+            var totalSnaps = snapElements.length;
+            var hideTimeout;
+
+            var observerOptions = {
+                root: null,
+                rootMargin: "0px",
+                threshold: 0.5
+            };
+
+            function updateProgressBar(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        var index = Array.from(snapElements).indexOf(entry.target);
+                        var snapProgress = ((index + 1) / totalSnaps) * 100;
+                        progressBar.style.height = snapProgress + '%';
+
+                        pageIndicators.forEach(indicator => {
+                            indicator.classList.remove('active');
+                        });
+                        pageIndicators[index].classList.add('active');
+                    }
+                });
+            }
+
+            var observer = new IntersectionObserver(updateProgressBar, observerOptions);
+
+            function observeAll() {
+                snapElements.forEach(element => {
+                    observer.observe(element);
+                });
+            }
+
+            observeAll();
+
+            function showActiveTitle() {
+                var activeIndicator = document.querySelector('.page-indicator .page.active');
+                if (activeIndicator) {
+                    activeIndicator.classList.add('show');
+
+                    if (hideTimeout) {
+                        clearTimeout(hideTimeout);
+                    }
+
+                    hideTimeout = setTimeout(function() {
+                        activeIndicator.classList.remove('show');
+                    }, 1000);
+                }
+            }
+
+            window.addEventListener('scroll', () => {
+                showActiveTitle();
+                observer.disconnect();
+                snapElements.forEach(element => {
+                    observer.observe(element);
+                });
+            });
+        });
+    </script>
 </body>
 </html>

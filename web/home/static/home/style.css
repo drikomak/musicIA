@@ -2,6 +2,11 @@ body{
     background-color: black;
 }
 
+a {
+    text-decoration:underline;
+    color: whitesmoke;
+}
+
 
 nav {
     display: flex;
@@ -230,3 +235,367 @@ details[open] .afficher-moins {
     text-decoration: wavy;
     margin-top: 10px;
 }
+
+/* Style général pour la section Fonctionnement */
+#fonctionnement {
+    margin: 40px 0;
+    padding: 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.fonctionnement-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #0C32A4;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.fonctionnement-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.fonctionnement-card {
+    width: 350px;
+    height: 300px;
+    perspective: 1000px;
+    margin: 15px;
+    position: relative; /* Required for proper shadow display */
+}
+
+.fonctionnement-card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fonctionnement-card:hover .fonctionnement-card-inner {
+    transform: rotateY(180deg);
+}
+
+.fonctionnement-card-front, .fonctionnement-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+}
+
+.fonctionnement-card-front {
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Required for the pseudo-element */
+}
+
+.fonctionnement-card-front img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.fonctionnement-card-front h3 {
+    font-size: 20px;
+    color: #0C32A4;
+    margin-bottom: 10px;
+}
+
+.fonctionnement-card-front::after {
+    content: '↓';
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: #333;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+.fonctionnement-card-back {
+    background-color: #0C32A4;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow: auto;
+}
+
+.fonctionnement-card-back p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.fonctionnement-card-back img {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Ajout d'une animation de survol */
+.fonctionnement-card:hover {
+    transform: translateY(-2px);
+}
+
+
+
+/* Barre de prog/* Style général pour la section Fonctionnement */
+#fonctionnement {
+    margin: 40px 0;
+    padding: 20px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.fonctionnement-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #0C32A4;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+.fonctionnement-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.fonctionnement-card {
+    width: 350px;
+    height: 300px;
+    perspective: 1000px;
+    margin: 15px;
+    position: relative; 
+    transition: transform 0.5s ease, box-shadow 0.5s ease; 
+}
+
+.fonctionnement-card:hover {
+    transform: translateY(-10px); 
+}
+
+.fonctionnement-card-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s ease; 
+    transform-style: preserve-3d;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fonctionnement-card:hover .fonctionnement-card-inner {
+    transform: rotateY(180deg);
+}
+
+.fonctionnement-card-front, .fonctionnement-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+}
+
+.fonctionnement-card-front {
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+}
+
+.fonctionnement-card-front img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.fonctionnement-card-front h3 {
+    font-size: 20px;
+    color: #0C32A4;
+    margin-bottom: 10px;
+}
+
+.fonctionnement-card-front::after {
+    content: '↓';
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: #333;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+.fonctionnement-card-back {
+    background-color: #0C32A4;
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow: auto;
+}
+
+.fonctionnement-card-back p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.fonctionnement-card-back img {
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+/* barre de progression améliorée */
+.progress-container {
+    position: fixed;
+    width: 6px;
+    height: 80%;
+    right: 30px; 
+    top: 10%;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(to bottom, #0C32A4, #0940d3);
+    border-radius: 5px;
+    transition: height 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); 
+    position: relative;
+}
+
+.page-indicator {
+    position: fixed;
+    right: 70px; 
+    top: 10%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.page-indicator .page {
+    align-items: center;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    padding: 8px 12px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease; 
+    pointer-events: none; 
+}
+.page-indicator .page.active {
+    opacity: 1;
+    transform: translateX(0);
+    font-weight: bold;
+    pointer-events: auto; 
+}
+
+.page-indicator:hover .page {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto; 
+}
+
+
+
+button, .navig, .cam-button, .playbutton {
+    transition: transform 0.3s ease;
+}
+
+button:hover, .navig:hover, .cam-button:hover, .playbutton:hover {
+    transform: scale(1.1);
+}
+
+
+
+button.gen, input.gen[type="button"] {
+    color: #FFFFFF;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+button.gen:hover, input.gen[type="button"]:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-2px); 
+}
+
+button.gen:active, input.gen[type="button"]:active {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+    transform: translateY(0); 
+}
+
+

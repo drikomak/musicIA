@@ -12,7 +12,7 @@ data/
 midi/
 drums/
 babyslakh_16k/
-web/model
+web/model/
 
 # Distribution / packaging
 .Python
