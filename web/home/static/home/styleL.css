@@ -249,11 +249,13 @@ img {
     }
 }
 
-@media (max-width:1300px) {
+@media (max-width:1380px) {
     :root {
         --margin:0 100px
     }
 }
+
+
 
 @media (max-width:1000px) {
     :root {
@@ -261,7 +263,7 @@ img {
     }
 }
 
-@media (max-height:760px) {
+@media (max-height:860px) {
     .snaping {
         scroll-snap-type: none;
         height: unset;
@@ -269,11 +271,17 @@ img {
     }
 
     .snaping-element {
-        height: 700px;
+        height: 780px;
     }
 
     body {
         overflow-y: auto;
+    }
+}
+
+@media (max-width:1185px) {
+    .snaping-element {
+        height: 820px;
     }
 }
 
@@ -292,6 +300,8 @@ img {
         width: 250px;
     }
 }
+
+
 
 @media (max-width:500px) {
     :root {
@@ -430,4 +440,19 @@ img {
 
 #canvas {
     display: none;
+  }
+
+  #myProgress {
+    width: 100%;
+    background-color: #999;
+    grid-column: span 2;
+    border-radius: 10px;
+  }
+  
+  #myBar {
+    width: 1%;
+    height: 5px;
+    background-color: #1282D6;
+    border-radius: 10px;
+    transition: all .5s;
   }

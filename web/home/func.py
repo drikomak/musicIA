@@ -30,7 +30,18 @@ def initModel(init=False):
         model = None
 
     records = pd.read_csv(settings.RECORD_PATH, sep=";")
+    liste = []
+    for i in records.iterrows():
+        if time.time() - i[1]["time"] > 1209600:
+            liste.append(i[0])
+            try:
+                os.remove(f"{settings.MEDIA_PATH}{i[1]['path']}")
+            except:
+                pass
+
+    records = records.drop(liste)
     ids = records.id
+    records.to_csv(settings.RECORD_PATH, sep=';', index=False)
 
     return ids, model
 
@@ -47,15 +58,16 @@ def addRecord(path, prompt, user="Inconnu"):
     r.to_csv(settings.RECORD_PATH, sep=';', index=False)
 
 def gen(model, prompt, path, user):
-    # try:
+    try:
         res = model.generate([prompt], progress = True)
         for idx, one_wav in enumerate(res):
-            audio_write(f"media/{path}", one_wav.cpu(), model.sample_rate, strategy="loudness")
+            audio_write(f"{settings.MEDIA_PATH}{path}", one_wav.cpu(), model.sample_rate, strategy="loudness")
         addRecord(path, prompt, user)
         return True
-    # except Exception as e:
-    #     print(e)
-    #     return False
+    except Exception as e:
+        print(e)
+        return False
+
 
 def randomID(length=5):
     st = ""
@@ -73,9 +85,9 @@ def get_image_from_data_url(data_url):
     image_bytes = base64.b64decode(_dataurl)
     image_stream = io.BytesIO(image_bytes)
     image = Image.open(image_stream)
-    shutil.rmtree("media/camera")
-    os.mkdir("media/camera")
-    name = f"media/camera/{_filename}.{_extension}"
+    shutil.rmtree("{settings.MEDIA_PATH}camera")
+    os.mkdir("{settings.MEDIA_PATH}camera")
+    name = f"{settings.MEDIA_PATH}camera/{_filename}.{_extension}"
     image.save(name)
 
     return name
