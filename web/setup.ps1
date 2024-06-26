@@ -52,8 +52,8 @@ log "/~/ Installation des dépendances de MusicIA. /~/"
 # Installation de Chocolatey, FFMPEG, GIT et Python (https://chocolatey.org/)
 Install-Chocolatey
 choco feature enable -n=allowGlobalConfirmation
-choco install ffmpeg git
-choco install python --version=3.10.11
+choco install ffmpeg git -r
+choco install python --version=3.10.11 -r
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
 
 # Copie de l'application depuis Git vers le dossier Program Files (détection automatique)
@@ -83,8 +83,10 @@ try {
 # Installation des Packages, selon si la machine possède un GPU NVIDIA ou non (pour profiter de CUDA)
 $gpu = (Get-WmiObject Win32_VideoController).Name
 If ($gpu -like '*NVIDIA*') {
+    log " /~/ GPU NVIDIA détecté, installation pour la technologie CUDA /~/"
     python3.10 -m pip install -r requirementsCUDA.txt
 } Else {
+    log " /~/ GPU NVIDIA non détecté, installation classique. Le modèle sera moins efficace. /~/"
     python3.10 -m pip install -r requirementsCPU.txt
 }
 

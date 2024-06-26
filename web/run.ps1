@@ -1,7 +1,7 @@
 Set-Location $Env:Programfiles
 if (Test-Path "musicIA") {
     Set-Location .\musicIA
-    "/~/ MusicIA 1.1 /~/ \n"
+    "/~/ MusicIA 1.1 /~/ `n"
     venv/Scripts/Activate.ps1
     Set-Location .\web
     try {
