@@ -166,16 +166,7 @@ nav {
 .numero h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
-}
-
-.fenetre summary {
-    list-style: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    outline: none;
+    text-align: center;
 }
 
 
@@ -186,19 +177,6 @@ nav {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     height: 60px;
-}
-
-
-
-
-details[open] .fenetre-content,
-details[open] .afficher-plus {
-    display: none;
-}
-
-details[open] .full-content,
-details[open] .afficher-moins {
-    display: block;
 }
 
 .right-frame {
