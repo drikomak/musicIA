@@ -69,6 +69,7 @@ function getValue(param) {
     return p.value.toString()
 }
 
+var cam
 function setupCamera() {   
     let width = 640; // We will scale the photo width to this
     let height = 480; // This will be computed based on the input stream
@@ -108,6 +109,9 @@ function clearphoto() {
 
 function takepicture() {
     const context = canvas.getContext("2d");
+    document.getElementById("video").srcObject.getTracks().forEach(function(track) {
+        track.stop();
+    });
     width = 640; height = 480;          // NE DEVRAIT PAS ETRE EN DUR !! CODE SELON MON PC PORTABLE, A REVOIR!!!!!!!!!!!!!!!!
     if (width && height) {
         canvas.width = width;         
@@ -122,6 +126,38 @@ function takepicture() {
         return data
     } else {
         return clearphoto();
+    }
+}
+
+function closeCam() {
+    let vid = document.getElementById("video")
+    if (vid) {
+        vid.srcObject.getTracks().forEach(function(track) {
+            track.stop();
+        });
+    }
+    
+    $("#camera-overlay").empty().css("display","none").removeClass("htmx-swapping")
+}
+
+function validatePic(value) {
+    closeCam()
+    $("#emotion").val(value)
+}
+
+function move() {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 1;
+    var id = setInterval(frame, 10);
+    function frame() {
+        if (width >= 100) {
+            clearInterval(id);
+            i = 0;
+        } else {
+            width+=0.018;
+            elem.style.width = width + "%";
+        }
     }
 }
 
@@ -140,31 +176,80 @@ $(document).ready(function () {
         }
         
     })
+
+    $(".page").on("click", function () {
+        if (window.innerHeight > 760) {
+            let nb = $(this).data("index")
+            let el = document.getElementById('sn')
+            let h = el.clientHeight.toFixed(0)
+            console.log(nb, h, window.innerHeight);
+            
+            el.scroll({top:h*nb,behavior:"smooth"})
+        } else {
+            let nb = $(this).data("index")
+            document.getElementById("sn-"+nb).scrollIntoView()
+        }
+    })
+
+    var snapElements = document.querySelectorAll('.snaping-element');
+    var progressBar = document.getElementById('progress-bar');
+    var pageIndicators = Array.from(document.querySelectorAll('.page-indicator .page'));
+    var totalSnaps = snapElements.length;
+    var hideTimeout;
+
+    var observerOptions = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5
+    };
+
+    function updateProgressBar(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                var index = Array.from(snapElements).indexOf(entry.target);
+                var snapProgress = ((index + 1) / totalSnaps) * 100;
+                progressBar.style.height = snapProgress + '%';
+
+                pageIndicators.forEach(indicator => {
+                    indicator.classList.remove('active');
+                });
+                pageIndicators[index].classList.add('active');
+            }
+        });
+    }
+
+    var observer = new IntersectionObserver(updateProgressBar, observerOptions);
+
+    function observeAll() {
+        snapElements.forEach(element => {
+            observer.observe(element);
+        });
+    }
+
+    observeAll();
+
+    function showActiveTitle() {
+        var activeIndicator = document.querySelector('.page-indicator .page.active');
+        if (activeIndicator) {
+            activeIndicator.classList.add('show');
+
+            if (hideTimeout) {
+                clearTimeout(hideTimeout);
+            }
+
+            hideTimeout = setTimeout(function() {
+                activeIndicator.classList.remove('show');
+            }, 1000);
+        }
+    }
+
+    window.addEventListener('scroll', () => {
+        showActiveTitle();
+        observer.disconnect();
+        snapElements.forEach(element => {
+            observer.observe(element);
+        });
+    });
 })
 
-function closeCam() {
-    $("#camera-overlay").empty().css("display","none").removeClass("htmx-swapping")
-}
-
-function validatePic() {
-    closeCam()
-    $("#emotion").children()
-}
-
-function move() {
-
-      i = 1;
-      var elem = document.getElementById("myBar");
-      var width = 1;
-      var id = setInterval(frame, 10);
-      function frame() {
-        if (width >= 100) {
-          clearInterval(id);
-          i = 0;
-        } else {
-          width+=0.018;
-          elem.style.width = width + "%";
-        }
-      }
-    }
   

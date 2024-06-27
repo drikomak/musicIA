@@ -4,7 +4,7 @@
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MusicIA - 1.0</title>
+    <title>MusicIA - 1.1</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="{% static 'home/script.js' %}"></script>
     <script src="https://unpkg.com/htmx.org@1.9.12"></script>
@@ -132,13 +132,13 @@
                             <div class="section">
                                 <label for="emotion">Émotion</label>
                                 <select name="emotion" id="emotion">
-                                    <option id="0" value="" selected>Neutre</option>
-                                    <option id="1" value="joyful">Joyful</option>
-                                    <option id="2" value="happy">Happy</option>
-                                    <option id="3" value="sad">Sad</option>
-                                    <option id="4" value="melancolic">Melancolic</option>
-                                    <option id="5" value="angry">Angry</option>
-                                    <option id="6" value="enrageous">Enrageous</option>
+                                    <option id="emo0" value="" selected>Neutre</option>
+                                    <option id="emo1" value="joyful">Joyful</option>
+                                    <option id="emo2" value="happy">Happy</option>
+                                    <option id="emo3" value="sad">Sad</option>
+                                    <option id="emo4" value="melancolic">Melancolic</option>
+                                    <option id="emo5" value="angry">Angry</option>
+                                    <option id="emo6" value="enrageous">Enrageous</option>
                                 </select>
                             </div>
                             <span class="cam-button dds__icon dds__icon--camera" hx-get="/setupcam" hx-trigger="click" hx-target="#camera-overlay" hx-swap="outerHTML"></span>
@@ -279,69 +279,5 @@
             </div>
         </div>
     </div>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var snapElements = document.querySelectorAll('.snaping-element');
-            var progressBar = document.getElementById('progress-bar');
-            var pageIndicators = Array.from(document.querySelectorAll('.page-indicator .page'));
-            var totalSnaps = snapElements.length;
-            var hideTimeout;
-
-            var observerOptions = {
-                root: null,
-                rootMargin: "0px",
-                threshold: 0.5
-            };
-
-            function updateProgressBar(entries) {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        var index = Array.from(snapElements).indexOf(entry.target);
-                        var snapProgress = ((index + 1) / totalSnaps) * 100;
-                        progressBar.style.height = snapProgress + '%';
-
-                        pageIndicators.forEach(indicator => {
-                            indicator.classList.remove('active');
-                        });
-                        pageIndicators[index].classList.add('active');
-                    }
-                });
-            }
-
-            var observer = new IntersectionObserver(updateProgressBar, observerOptions);
-
-            function observeAll() {
-                snapElements.forEach(element => {
-                    observer.observe(element);
-                });
-            }
-
-            observeAll();
-
-            function showActiveTitle() {
-                var activeIndicator = document.querySelector('.page-indicator .page.active');
-                if (activeIndicator) {
-                    activeIndicator.classList.add('show');
-
-                    if (hideTimeout) {
-                        clearTimeout(hideTimeout);
-                    }
-
-                    hideTimeout = setTimeout(function() {
-                        activeIndicator.classList.remove('show');
-                    }, 1000);
-                }
-            }
-
-            window.addEventListener('scroll', () => {
-                showActiveTitle();
-                observer.disconnect();
-                snapElements.forEach(element => {
-                    observer.observe(element);
-                });
-            });
-        });
-    </script>
 </body>
 </html>

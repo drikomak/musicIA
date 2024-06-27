@@ -85,8 +85,8 @@ def get_image_from_data_url(data_url):
     image_bytes = base64.b64decode(_dataurl)
     image_stream = io.BytesIO(image_bytes)
     image = Image.open(image_stream)
-    shutil.rmtree("{settings.MEDIA_PATH}camera")
-    os.mkdir("{settings.MEDIA_PATH}camera")
+    shutil.rmtree(f"{settings.MEDIA_PATH}camera")
+    os.mkdir(f"{settings.MEDIA_PATH}camera")
     name = f"{settings.MEDIA_PATH}camera/{_filename}.{_extension}"
     image.save(name)
 
@@ -94,6 +94,8 @@ def get_image_from_data_url(data_url):
 
 
 def getEmotionSingle(filename):
+    dictEmotion = {"angry":"angry", "fear":"", "neutral":"", "sad":"sad", "disgust":"", "happy":"happy", "surprise":"joyful", None:""}
+    dictNom = {"angry":"Énervé", "fear":"Effrayé (inutilisable)", "neutral":"Neutre", "sad":"Triste", "disgust":"Dégouté (inutilisable)", "happy":"Heureux", "surprise":"Joyeux", None:"Aucune"}
     face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
     frame = cv2.imread(filename, cv2.IMREAD_UNCHANGED)
@@ -117,4 +119,4 @@ def getEmotionSingle(filename):
         # Display the resulting frame
         cv2.imwrite(filename, frame)
 
-    return emotion
+    return emotion, dictEmotion[emotion], dictNom[emotion]

@@ -74,8 +74,8 @@ def api(request):
 @csrf_exempt
 def camera(request):
     filename = get_image_from_data_url(request.POST.get('imageURL', ''))
-    emotion = getEmotionSingle(filename)
-    return render(request, "home/face.html", {"filename":filename, "emotion":emotion})
+    emotion, valEmo, nomEmo = getEmotionSingle(filename)
+    return render(request, "home/face.html", {"filename":filename, "emotion":emotion, "valemo":valEmo, "nomemo":nomEmo})
 
 @csrf_exempt
 def getCamera(request):
