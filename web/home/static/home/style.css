@@ -169,6 +169,10 @@ nav {
     text-align: center;
 }
 
+.fenetre {
+    display: flex;
+    flex-direction: column;
+}
 
 .fenetre-content {
     overflow: hidden;
