@@ -3,7 +3,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import DataLoader
 import librosa
 import os
 import matplotlib.pyplot as plt
@@ -13,11 +13,11 @@ from tqdm import tqdm
 
 
 cache = {}
-is_cache = True
+is_cache = False
 max_cache = 3000
 
 class MusicCapsDataset(torch.utils.data.Dataset):
-    def __init__(self, csv_file, root_dir, sequence_length=100, device="cpu"):
+    def __init__(self, csv_file, root_dir, sequence_length=513, device="cpu"):
         self.data_frame = pd.read_csv(csv_file)
         self.root_dir = root_dir
         self.audio_extensions = ['.wav']
@@ -61,18 +61,10 @@ class MusicCapsDataset(torch.utils.data.Dataset):
         n_fft = 1024
         hop_length = 512
         stft = librosa.stft(y, n_fft=n_fft, hop_length=hop_length, win_length=n_fft)
-        stft_magnitude, stft_phase = librosa.magphase(stft)
-        stft_magnitude_db = librosa.amplitude_to_db(stft_magnitude)
-        stft_magnitude_db = (stft_magnitude_db - np.min(stft_magnitude_db)) / (np.max(stft_magnitude_db) - np.min(stft_magnitude_db))
-        
-        if stft_magnitude_db.shape[1] > self.sequence_length:
-            stft_magnitude_db = stft_magnitude_db[:, :self.sequence_length]
-        else:
-            pad_width = self.sequence_length - stft_magnitude_db.shape[1]
-            stft_magnitude_db = np.pad(stft_magnitude_db, ((0, 0), (0, pad_width)), mode='constant')
 
-        # Ensure the output has 512 dimensions
-        return torch.tensor(stft_magnitude_db.T, dtype=torch.float32)[:,:512].to(self.device)
+        t = torch.tensor(stft, dtype=torch.float32)
+        miss = 1873 - t.shape[1]
+        return torch.concat([t, torch.zeros((513,miss))], 1).to(device)
 
     def extract_caption_features(self, caption):
         input_ids = self.tokenizer(caption, return_tensors='pt').input_ids.to(self.device)
@@ -87,8 +79,8 @@ class MusicCapsDataset(torch.utils.data.Dataset):
 class MusicGenerationModel(nn.Module):
     def __init__(self, text_feature_dim, audio_feature_dim, hidden_dim):
         super(MusicGenerationModel, self).__init__()
-        self.text_encoder = nn.LSTM(input_size=text_feature_dim, hidden_size=hidden_dim, num_layers=2, batch_first=True)
-        self.audio_decoder = nn.LSTM(input_size=hidden_dim, hidden_size=hidden_dim, num_layers=2, batch_first=True)
+        self.text_encoder = nn.LSTM(input_size=text_feature_dim, hidden_size=1873, num_layers=2, batch_first=True)
+        self.audio_decoder = nn.LSTM(input_size=audio_feature_dim, hidden_size=hidden_dim, num_layers=2, batch_first=True)
         self.decoder_output_layer = nn.Linear(hidden_dim, audio_feature_dim)
 
     def forward(self, text_features):
@@ -115,7 +107,7 @@ def train_model(data_loader, model, criterion, optimizer, num_epochs=10, save_pa
         for i, batch in enumerate(progress_bar):
             if batch is None:
                 continue
-            text_features, audio_features = batch
+            audio_features, text_features = batch
 
             # Move data to the device
             text_features = text_features.to(device)
@@ -152,23 +144,26 @@ def generate_music(prompt, model, device="cpu"):
         tokenizer = T5Tokenizer.from_pretrained('t5-small')
         t5_model = T5EncoderModel.from_pretrained('t5-small').to(device)
         input_ids = tokenizer(prompt, return_tensors='pt').input_ids.to(device)
-        text_features = t5_model(input_ids=input_ids).last_hidden_state.to(device)
+        text_features = t5_model(input_ids=input_ids)
+
+        pad_width = 513 - text_features.last_hidden_state.size(1)
+        text_features = F.pad(text_features.last_hidden_state, (0, 0, 0, pad_width), mode='constant', value=0)
 
         generated_audio_features = model(text_features)
 
         generated_audio_features = generated_audio_features.squeeze(0).cpu().numpy().T
-        generated_audio_features = (generated_audio_features - np.min(generated_audio_features)) / (np.max(generated_audio_features) - np.min(generated_audio_features))
+        # generated_audio_features = (generated_audio_features - np.min(generated_audio_features)) / (np.max(generated_audio_features) - np.min(generated_audio_features))
 
-        librosa.display.specshow(generated_audio_features, x_axis='time', y_axis='log', cmap='coolwarm')
+        S_db = librosa.amplitude_to_db(np.abs(generated_audio_features), ref=np.max)
+
+        librosa.display.specshow(S_db, x_axis='time', y_axis='log', cmap='coolwarm')
         plt.colorbar(format='%+2.0f dB')
         plt.title('Spectrogramme')
         plt.tight_layout()
         plt.show()
 
-        n_fft = 1023
-        hop_length = 512
-        e = np.exp(generated_audio_features)
-        y_hat = librosa.griffinlim(e, n_iter=32, hop_length=hop_length, win_length=n_fft, n_fft=n_fft)
+        
+        y_hat = librosa.istft(S_db)
 
         audio_file_path = 'temp_audio236.wav'
         sf.write(audio_file_path, y_hat, 22050, format='wav')
@@ -177,9 +172,9 @@ def generate_music(prompt, model, device="cpu"):
 
 if __name__ == "__main__":
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    model = MusicGenerationModel(text_feature_dim=512, audio_feature_dim=512, hidden_dim=256).to(device)
+    model = MusicGenerationModel(text_feature_dim=512, audio_feature_dim=1873, hidden_dim=256).to(device)
 
-    path = "model15.pth"
+    path = "model165.pth"
     if os.path.exists(path):
         model.load_state_dict(torch.load(path))
     else:
